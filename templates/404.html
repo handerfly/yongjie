@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}404{% endblock %}
+
+
+{% load staticfiles %}
+{% block header_extends %}
+
+	<link rel="stylesheet" type="text/css" href="{% static 'templets/default/style/site.min.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'templets/default/style/style.css' %}" />
+	<link href="{% static 'cdn.bootcss.com/animate.css/3.5.2/animate.min.css' %}" rel="stylesheet">
+{% endblock %}
+{% block body_tag %} <body class="articleview"> {% endblock %}
+{% block content %}
+
+    <div class="nybanner">
+        <span><img width="1920" height="433" src="/media/{{content.banner_img}}" /></span>
+	</div>
+    <!--/nybanner-->
+
+    <div class="layout">
+        <div class="abouttext container">
+            <div class="nyname">
+                <h1>404</h1>
+
+
+
+
+            </div>
+			<div class="article-content">
+
+                404
+
+			</div>
+        </div>
+    </div>
+	<!--/main-->
+
+
+{% endblock %}
+{% block script_extends %}
+	<script>
+		$(document).on('click','.box-name',function(){
+			var t = $(this),
+			boxWrap = t.parents('.box-item'),
+			ddWrap = boxWrap.find('.box-cnt');
+			boxWrap.toggleClass('active');
+			t.toggleClass('active');
+			ddWrap.slideToggle();
+		});
+	</script>
+    <script src="{% static 'cdn.bootcss.com/unveil/1.3.0/jquery.unveil.min.js' %}"></script>
+    <script src="{% static 'include/site.min.js' %}"></script>
+
+{% endblock %}

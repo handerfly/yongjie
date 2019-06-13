@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head_extends %}
+<link rel="stylesheet" href="{% static 'css/pic_cn.css' %}" media="screen,print"/>
+{% endblock %}
+{% block content%}
+
+<div class="tbanner">
+   <div class="banner" style=""></div>
+        <img src="{% static 'images/banner.jpg' %}" alt="">
+</div>
+<div class="mapnav">
+    <div class="wrapper">
+        <a href="{% url 'home'%}">首页</a> <em>&gt;</em>
+        净化工程案例
+    </div>
+</div>
+<div class="wrapper">
+    <div class="app_bd cf">
+        <div class="app_list cf">
+            {% for each_solution,relate_cases in solutions.items %}
+            <div class="li cf">
+                <a href="{% url 'home:solution_detail' each_solution.id %}" title="{{each_solution.title}}" class="pic" target="_blank">
+                    <img src="/media/{{each_solution.cover}}" alt="{{each_solution.title}}" title="{{each_solution.title}}"/>
+                </a>
+                <div class="desc">
+                    <h2>
+                        <a href="{% url 'home:solution_detail' each_solution.id %}" class="tt" target="_blank">{{each_solution.title}}</a>
+                    </h2>
+                    <div class="con">
+                        {{each_solution.detail|safe|striptags|truncatechars:220  }}...
+                    </div>
+                    <a href="{% url 'home:solution_detail' each_solution.id %}" class="more" target="_blank"><i class="icon-arrow"></i>详细了解</a>
+                    <h3>相关工程案例</h3>
+                    <ul class="cf">
+                        {% for each_case in relate_cases %}
+                            <li title="{{each_case.title}}"><a href="{% url 'home:case_detail' each_case.id%}" target="_blank" title="{{each_case.title}}">&gt;{{each_case.title}}</a></li>
+                        {% empty %}
+                        暂时没有相关案例...
+                        {%endfor%}
+                    </ul>
+                </div>
+            </div>
+            {% empty %}
+            暂时没有解决方案...
+            {% endfor%}
+        </div>
+            <div class="fc"></div>
+            <ul id='pagination' class='pagination'  >
+
+            </ul>
+    </div>
+</div>
+{% endblock %}

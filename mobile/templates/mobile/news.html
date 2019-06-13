@@ -1,0 +1,71 @@
+{% extends 'mobilebase.html' %}
+{% load staticfiles %}
+
+{% block head_extends %}
+<link rel="stylesheet" href="{% static 'mobile/css/article_cn.css' %}" media="screen,print"/>
+{% endblock %}
+
+{% block top %}
+<div class="top wrapper">
+    <a class="back" href="javascript:history.back()"><i class="icon-back"></i></a>
+    <h2 class="tit">新闻</h2>
+    <a href="" class="lang"></a>
+    <img src="http://m.yongjiejh.com/Public/m/images/navBtn.png" class="navBtn">
+</div>
+{% endblock %}
+
+{% block content%}
+<div class="container">
+    <div id="main">
+        <div id="main_c">
+            <div class="newslist">
+                {% for each_news in page_of_obj %}
+            <div class="item">
+                <div class="pic"><a href="{% url 'mobile:news_detail' each_news.id%}" title="{{ each_news.title }}">
+                    <img src="/media/{{ each_news.cover }}" alt="{{ each_news.title }}" /></a></div>
+                <div class="desc">
+                    <h3 class="title"><a href="{% url 'mobile:news_detail' each_news.id%}" title="{{ each_news.title }}">{{ each_news.title|truncatechars:100  }}</a></h3>
+                    <div class="info">
+                        {{ each_news.content|striptags|truncatechars:120  }}
+                    </div>
+                    <p class="datetime">{{each_news.update_time|date:'Y-m-d'}}</p>
+                </div>
+            </div>
+            {% empty %}
+            暂时没有新闻...
+            {% endfor%}
+
+                <div class="fc"></div>
+                    <ul id='pagination' class='pagination'  >
+                        {% ifnotequal  count 0 %}
+                        {% ifnotequal  count 1 %}
+                            {# 上一页 #}
+
+                            {% if page_of_obj.has_previous %}
+                                <li><a href="?page={{ page_of_obj.previous_page_number }}" title="上一页">上一页</a></li>
+                            {% endif %}
+
+                            {# 全部页码 #}
+                            {% for page_num in page_range %}
+                                {% if page_num == page_of_obj.number %}
+                                    <li><a href="?page={{ page_num }}" class="current">{{ page_num }}</a></li>
+                                {% else %}
+                                    <li><a href="?page={{ page_num }}" title="第{{page_num}}页">{{ page_num }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                            {# 下一页 #}
+
+                            {% if page_of_obj.has_next %}
+                                <li><a href="?page={{ page_of_obj.next_page_number }}"  title="下一页">下一页</a></li>
+                            {% else %}
+                                &raquo;
+                            {% endif %}
+                        {% endifnotequal  %}
+                    {% endifnotequal  %}
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

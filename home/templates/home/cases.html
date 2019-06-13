@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head_extends %}
+<link rel="stylesheet" href="{% static 'css/product_cn.css' %}" media="screen,print"/>
+{% endblock %}
+{% block content%}
+
+<div class="tbanner">
+   <div class="banner" style=""></div>
+        <img src="{% static 'images/banner.jpg' %}" alt="">
+</div>
+<div class="mapnav">
+    <div class="wrapper">
+        <a href="../yongjiejh.html">首页</a> <em>&gt;</em> <a href="equipment.html"  class="ns">净化设备</a>
+    </div>
+</div>
+<div class="category">
+    <div class="wrapper">
+        <div class="con">
+            <h2>工程案例</h2>
+            <p>永洁净化精挑细选优秀的净化设备合作伙伴</p>
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="catelist cf">
+        <a href="{% url 'home:cases' 0 %}" class="home {% if type == 0 %}active{% endif %}">全部</a>
+        {% for each_case_type in cases_types %}
+            <a href="{% url 'home:cases' each_case_type.id %}" class="{% if each_case_type.id == type %}active{% endif %}" title="{{each_case_type.title}}">{{each_case_type.title}}</a>
+        {% empty %}
+        暂时没有分类...
+        {% endfor %}
+    </div>
+    <div class="prod_list">
+        <ul class="cf list">
+            {% for each_case in page_of_obj %}
+            <li>
+                <a href="{% url 'home:case_detail' each_case.id%}" class="pic">
+                    <img src="/media/{{each_case.cover}}" alt="{{each_case.title}}"/></a>
+                <h3 class="tt"><a href="{% url 'home:case_detail' each_case.id%}" title="{{each_case.title}}">{{each_case.title}}</a></h3>
+            </li>
+            {% empty %}
+            暂时没有产品...
+            {%endfor%}
+        </ul>
+        <div class="fc"></div>
+        <ul id='pagination' class='pagination'  >
+            {% ifnotequal  count 0 %}
+                {% ifnotequal  count 1 %}
+                    {# 上一页 #}
+
+                    {% if page_of_obj.has_previous %}
+                        <li><a href="?page={{ page_of_obj.previous_page_number }}"  title="上一页"> 上一页 </a></li>
+                    {% endif %}
+
+                    {# 全部页码 #}
+                    {% for page_num in page_range %}
+                        {% if page_num == page_of_obj.number %}
+                            <li><a href="?page={{ page_num }}" class="current">{{ page_num }}</a></li>
+                        {% else %}
+                               <li><a href="?page={{ page_num }}" title="第{{page_num}}页">{{ page_num }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {# 下一页 #}
+
+                    {% if page_of_obj.has_next %}
+                        <li><a href="?page={{ page_of_obj.next_page_number }}"  title="下一页">下一页</a></li>
+                    {% else %}
+                        &raquo;
+                    {% endif %}
+                {% endifnotequal  %}
+            {% endifnotequal  %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

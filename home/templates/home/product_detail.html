@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head_extends %}
+<link rel="stylesheet" href="{% static 'css/product_cn.css' %}" media="screen,print"/>
+{% endblock %}
+{% block content%}
+
+<div class="tbanner">
+    <div class="banner" style=""></div>
+        <img src="{% static 'images/banner.jpg' %}" alt="">
+    </div>
+<div class="mapnav">
+    <div class="wrapper">
+        <a href="/">首页</a> <em>&gt;</em>
+        <a href="{% url 'home:products' product.type.id%}" >{{product.type.title}}</a> <em>&gt;</em>
+        {{product.title}}
+    </div>
+</div>
+    <div class="wrapper proddetail cf">
+        <div class="prodlist">
+            <h2>设备分类</h2>
+            <ul>
+                {% for each_product_type in product_types %}
+                <li><a href="{% url 'home:products' each_product_type.id%}" class="{% if each_product_type.id == type %}active{% endif %}" title="净化通风">{{each_product_type.title}}</a></li>
+                {%empty%}
+                    暂时没有分类...
+                {%endfor%}
+            </ul>
+        </div>
+        <div class="prod-main">
+            <div class="prod_detail">
+                <h1 class="title">{{product.title}}</h1>
+                <div class="pic imgs_tab">
+                    <div class="bfocus">
+                        <ul>
+                            {% for each_image in images %}
+                            <li><a href="javascript:;"><img src="/media/{{each_image.images}}" alt="{{product.title}}"/></a></li>
+                            {% empty %}
+                            暂时没有图片...
+                            {%endfor%}
+                        </ul>
+                    </div>
+                    <a href="javascript:;" class="prev"><i></i></a>
+                    <a href="javascript:;" class="next"><i></i></a>
+                </div>
+                <div class="tit">设备详细介绍</div>
+                <div class="desc">
+                    {% if product %}
+                        {{product.detail|safe}}
+                        {%else%}
+                            <div class="noinfo">暂无内容显示，请稍候...或 <a href="/about/list-67.html" target="_blank">联系我们</a>！</div>
+                        {%endif%}
+                </div>
+            </div>
+            <div class="pnav">
+                    <span>上一页：<a href="/equipment/43.html" title="洁净棚">洁净棚</a></span><span>下一页：<a href="/equipment/41.html" title="风机过滤机组">风机过滤机组</a></span>                </div>        </div>
+    </div>
+{% endblock %}

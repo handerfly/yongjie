@@ -1,0 +1,118 @@
+@charset "utf-8";
+/*
+#main .pic img,.case_list .pic img{transition:All 0.4s ease-in-out;-webkit-transition:All 0.4s ease-in-out;-moz-transition:All 0.4s ease-in-out;-o-transition:All 0.4s ease-in-out;}
+#main .pic img:hover,.case_list .li .pic img:hover{transform:scale(1.2);-webkit-transform:scale(1.2);-moz-transform:scale(1.2);-o-transform:scale(1.2);-ms-transform:scale(1.2);}
+*/
+/*客户案例*/
+.case_list{padding-top:0px;}
+.case_list .li{float:left;width:280px;margin:0 26px 25px 0;}
+.case_list .li .pic{display:block;height:194px;border:1px solid #cecece;padding:2px;overflow:hidden}
+.case_list .li .pic img{width:100%;height:100%}
+.case_list .li .tt{display:block;font-weight:normal;font-size:16px;line-height:33px;height:33px;overflow:hidden;text-align:center;}
+.case_list .end{margin-right:0;}
+.case_list .li:hover .pic{border-color:#016aaf;background:#016aaf}
+.case_list .li:hover .tit{color:#016aaf}
+
+.case_detail{}
+.case_detail .title{text-align:center;font-size:16px;line-height:22px;padding:20px 10px;}
+.case_detail .pics{width:100%;height:200px;position:relative;overflow:hidden;}
+.case_detail .pics .hd{position:absolute;height:28px;line-height:28px;bottom:0;right:20px;z-index:1;}
+.case_detail .pics .hd li{display:inline-block;width:5px;height:5px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;background:#333;text-indent:-9999px;overflow:hidden;margin:0 6px;}
+.case_detail .pics .hd li.on{background:#ddd;}
+
+.case_detail .tit{background:#eee;text-align:center;font-size:16px;line-height:40px;color:#777;margin-bottom:20px;}
+.case_detail .tit span{display:inline-block;cursor:pointer;}
+.case_detail .tit .active{color:#00469c}
+.case_detail .tit em{display:inline-block;margin:0 15px;}
+.case_detail .desc{padding:0px 0 50px}
+
+/*应用*/
+.apphd{border-bottom:0}
+.apphd .mtitle{height:40px;line-height:40px;margin-bottom:10px}
+.apphd .mtitle h2{font-size:16px;}
+.app_list{padding:10px;}
+.app_list .li{background:#f7f7f7;border:1px solid #ddd;padding:10px;margin-bottom:10px;transition:all 0.15s ease-in-out 0s;}
+.app_list .li .pic{float:left;width:120px;height:86px;}
+.app_list .li .desc{margin-left:130px;}
+.app_list .li .desc h2{line-height:26px;height:26px;margin-bottom:10px;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.app_list .li .desc .con{font-size:12px;line-height:20px;color:#999;height:40px;overflow:hidden;}
+.app_list .li .desc h3{font-size:14px;line-height:22px;color:#666;margin:18px 0 8px;}
+.app_list .li:hover{background:#eee;}
+.app_list .li:hover .desc .con{color:#666}
+
+.app_detail{padding:15px;}
+.app_detail .pic{margin-bottom:10px;}
+.app_detail .pic img{width:100%;}
+.app_detail .detail{font-size:14px;line-height:20px;color:#777}
+.app_detail .detail .title{font-size:18px;color:#555;line-height:30px;margin-bottom:10px;}
+.app_detail .detail .showmore{color:#016aaf}
+.app_detail .detail .showmore i{font-weight:700;color:#b52323;font-style:normal}
+.app_detail .detail .desc{display:none}
+
+.app_detail .detail .chathd{font-size:16px;line-height:42px;color:#777;border-bottom:1px solid #f0f0f0;margin-top:30px;}
+.app_detail .detail .chat{margin-top:20px;}
+.app_detail .detail .chat a{float:left;margin:0 10px 10px 0;padding:0 10px;font-size:14px;}
+
+.appbox{border-top:1px solid #eee;padding-bottom:25px;}
+.appbox h2{font-size:18px;line-height:80px;text-align:center;}
+
+.app_case .catelist{margin:0 0 5px;}
+.app_case .list{padding:5px;}
+.app_case .list li{float:left;width:50%;margin:0 0 10px 0px;padding:5px;box-sizing:border-box;}
+.app_case .list li .pic{display:block;border:1px solid #cecece;padding:1px;overflow:hidden}
+.app_case .list li .pic img{width:100%;height:auto}
+.app_case .list li .tt{display:block;font-weight:normal;font-size:14px;line-height:30px;height:30px;overflow:hidden;text-align:center;}
+.app_case .end{margin-right:0;}
+.app_case .list li:hover .pic{border-color:#016aaf;background:#016aaf}
+.app_case .list li:hover .tit{color:#016aaf}
+
+.app_prod{padding-bottom:6px}
+.app_prod li{float:left;width:50%;padding:5px;box-sizing:border-box;}
+.app_prod li .pic{display:block;border:1px solid #cecece;overflow:hidden;padding:1px;}
+.app_prod li .pic img{width:100%;height:auto}
+.app_prod .end{margin-right:0}
+.app_prod h3{line-height:30px;height:30px;overflow:hidden;font-size:14px;text-align:center;}
+.app_prod h3 a{color:#555}
+.app_prod li:hover .pic{border-color:#016aaf;background:#016aaf}
+.app_prod li:hover .tt a{color:#016aaf}
+
+
+.otherapp{padding-bottom:20px;}
+.otherapp li{float:left;width:100%;box-sizing:border-box;padding:5px;margin:0 0px 10px 0;background:#0071bf;}
+.otherapp .pic{float:left;width:50%;display:block;overflow:hidden;}
+.otherapp .pic img{width:100%;height:auto;}
+.otherapp .end{margin-right:0;}
+.otherapp .desc{float:left;width:50%;text-align:center;color:#fff;}
+.otherapp .desc i{display:block;width:60px;height:67px;margin:5px auto;background-size:60px auto;}
+.otherapp .desc h2{font-size:14px;}
+.otherapp .desc .bicon-s1{background-position:0 0}
+.otherapp .desc .bicon-s2{background-position:0 -67px}
+.otherapp .desc .bicon-s3{background-position:0 -134px;}
+.otherapp .desc .bicon-s4{background-position:0 -203px;}
+
+/*列表页*/
+.pic_list{padding:5px;}
+.pic_list .li{float:left;width:50%;margin:0px 0px 0px 0;padding:5px;box-sizing:border-box;}
+.pic_list .li .pic{display:block;border:1px solid #cecece;padding:1px;}
+.pic_list .li .pic img{width:100%;height:100%}
+.pic_list .li .pic:hover{border-color:#a5d134}
+.pic_list .li .tt{display:block;line-height:30px;height:30px;overflow:hidden;font-size:14px;text-align:center;}
+.pic_list .end{margin-right:0;}
+.pic_list .li:hover .pic{border-color:#016aaf;background:#016aaf}
+.pic_list .li:hover a{color:#016aaf}
+
+.pic_list2{padding-top:0px;}
+.pic_list2 .li{float:left;width:202px;margin:0 17px 30px 0}
+.pic_list2 .li .pic{display:block;width:200px;height:120px;border:1px solid #ddd;padding:0px;overflow: hidden}
+.pic_list2 .li .pic img{width:100%;height:100%}
+.pic_list2 .li .tt{display:block;font-weight:normal;font-size:16px;line-height:30px;height:30px;overflow:hidden;text-align:center}
+.pic_list2 .end{margin-right:0;}
+
+.pic_list2 .li:hover .pic:hover{border-color:#a5d134}
+.pic_list2 .li:hover .tt{color:#016aaf}
+/*详情页*/
+.pic_detail .title{text-align:center;font-size:18px;padding:20px;}
+.pic_detail .pic{text-align:center;padding-bottom:20px;margin-bottom:20px;border-bottom:1px dotted #ddd}
+.pic_detail .pic img{border:1px solid #ddd;padding:5px;}
+
+.pic_detail .nr{padding:10px 0}

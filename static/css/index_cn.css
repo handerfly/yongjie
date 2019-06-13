@@ -1,0 +1,85 @@
+﻿/*首页*/
+.mtitle{}
+.fd{text-align:center}
+.more{padding:0 28px;height:42px;line-height:42px;font-size:20px;margin:25px auto 0;border-width:2px;border-radius:8px;width:178px;background:none}
+.more em{color:#ff7e00}
+.more:hover{background-color:#025299;color:#fff;}
+.more:hover em{color:#fff}
+
+/*应用*/
+.solution{margin:0px 0 30px;}
+.solution .mtitle h2 span{color:#0071bf}
+.solution li{float:left;width:570px;padding:10px;margin:0 20px 20px 0;background:#0071bf;}
+.solution .pic{float:left;width:310px;height:222px;display:block;overflow:hidden;margin-right:10px;}
+.solution .pic img{width:100%;height:100%;}
+.solution .end{margin-right:0;}
+.solution .desc{float:left;width:250px;text-align:center;color:#fff;}
+.solution .desc i{display:block;width:102px;height:115px;margin:22px auto;}
+.solution .desc h2{font-size:24px;}
+.solution .desc .bicon-s1{background-position:0 0}
+.solution .desc .bicon-s2{background-position:0 -115px}
+.solution .desc .bicon-s3{background-position:0 -230px;}
+.solution .desc .bicon-s4{background-position:0 -345px;}
+.solution .desc .bicon-s5{background-position:0 -460px;}
+.solution .desc .bicon-s6{background-position:0 -575px;}
+.solution .desc .bicon-s7{background-position:0 -690px;}
+
+.solution li .pic img{transition:All 0.4s ease-in-out;-webkit-transition:All 0.4s ease-in-out;-moz-transition:All 0.4s ease-in-out;-o-transition:All 0.4s ease-in-out;}
+.solution li .pic:hover img{transform:scale(1.05);-webkit-transform:scale(1.05);-moz-transform:scale(1.05);-o-transform:scale(1.05);-ms-transform:scale(1.05);}
+.solution li .pic:hover span{background:rgba(0,0,0,.6);color:#fff;}
+
+
+/*案例*/
+.case_list{padding-bottom:38px;background:#f6f6f6}
+.case_list .mtitle h2 span{background:#f6f6f6}
+.case_list li{float:left;width:280px;margin:0 26px 25px 0;}
+.case_list li .pic{display:block;height:194px;border:1px solid #cecece;padding:2px;overflow:hidden}
+.case_list li .pic img{width:100%;height:100%}
+.case_list li .tt{display:block;font-weight:normal;font-size:16px;line-height:33px;height:33px;overflow:hidden;text-align:center;}
+.case_list .end{margin-right:0;}
+.case_list li:hover .pic{border-color:#016aaf;background:#016aaf}
+.case_list li:hover .tit{color:#016aaf}
+
+/*选择我们*/
+.choose-us{padding-bottom:42px;}
+.choose-us ul{}
+.choose-us li{float:left;width:200px;padding:20px;text-align:center;color:#777;position:relative;}
+.choose-us li em{display:block;width:140px;height:140px;line-height:140px;font-size:24px;color:#fff;border-radius:100%;margin:0 auto 5px;background:#0071bf;transition:All 0.4s ease-in-out;-webkit-transition:All 0.4s ease-in-out;-moz-transition:All 0.4s ease-in-out;-o-transition:All 0.4s ease-in-out;}
+.choose-us li h3{font-size:18px;line-height:30px;margin-bottom:8px;font-weight:700}
+.choose-us li p{font-size:16px;line-height:22px;}
+.choose-us li.c4 em{line-height:28px;height:84px;padding:28px 0}
+.choose-us .bd{padding:10px 0px 10px;}
+.choose-us .more{margin-top:0;}
+
+.abouts{background:#f6f6f6;padding:30px 0 52px}
+.abouts .hd{color:#555;font-size:30px;line-height:50px;}
+.about{float:left;width:526px;}
+.about .bd{line-height:24px;font-size:14px;}
+.about .fd{text-align:left;margin-top:32px;}
+.about .fd a{float:left;margin-right:28px;}
+/*公司荣誉*/
+.certification{float:right;width:600px;}
+.certification .fd{text-align:center}
+.certification .fd .more{margin-top:40px;}
+.certification li{float:left;width:180px;margin:25px 30px 0px 0;}
+.certification li .pic{display:block;height:125px;border:1px solid #cecece;padding:2px;}
+.certification li .pic img{width:100%;height:100%}
+.certification li .pic:hover{border-color:#a5d134}
+.certification li h3{line-height:30px;height:30px;overflow:hidden;font-size:14px;text-align:center;}
+.certification .end{margin-right:0;}
+
+.certification li:hover .pic{border-color:#016aaf;background:#016aaf}
+.certification li:hover a{color:#016aaf}
+
+.news-panel{padding-top:38px;}
+.news{float:left;width:366px;padding:0 17px;}
+.news .hd{font-size:30px;color:#555;line-height:40px;margin-bottom:20px;}
+.news li:last-child{border-bottom:0;}
+.news li{height:39px;line-height:39px;position:relative;border-bottom:1px dotted #d5d5d5;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.news li em{float:left;color:#016aaf;margin-right:15px;}
+.news li a{color:#777;}
+.news li a:hover{color:#016aaf;}
+.news li:last-child{border-bottom:0;}
+
+.news-panel .fd{clear:both;text-align:center}
+.news-panel .fd .more{margin:37px 0 50px;}

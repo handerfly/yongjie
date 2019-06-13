@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head_extends %}
+<link rel="stylesheet" href="{% static 'css/article_cn.css' %}" media="screen,print"/>
+{% endblock %}
+{% block content%}
+
+<div class="tbanner">
+    <div class="banner" style=""></div>
+    <img src="{% static 'images/banner.jpg' %}" alt="">
+</div>
+<div class="mapnav">
+    <div class="wrapper">
+        <a href="../yongjiejh.html">首页</a> <em>&gt;</em>
+        <a href="news.html" >新闻中心</a> <em>&gt;</em>
+        <a href="list-97.html"  class="ns">永洁动态</a>
+    </div>
+</div>
+<div id="main_content">
+    <div id="main">
+    <div class="news_detail">
+        <h1 class="tt">{{news.title}}</h1>
+        <div class="datetime"></div>
+        <div class="info">
+            来源：{{news.author}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 日期: {{news.update_time|date:'Y年m月d日'}} &nbsp;&nbsp;&nbsp;&nbsp;浏览次数：<span id="pv">{{news.viewed}}</span>
+        </div>
+        <div class="nr" id="shownrs">
+            <p>	{{news.content|safe}}<p>
+        </div>
+        <div class="pnav">
+            <ul>
+                <li>上一篇：
+                    {% if pre_news %}
+                        <a href="{% url 'home:news_detail' pre_news.pk%}">{{ pre_news.title|truncatechars:23 }}</a>
+                    {% else %}
+                    没有了
+                    {% endif %}
+                </li>
+                <li>下一篇{{current_time}}：
+                    {% if next_news %}
+                        <a href="{% url 'home:news_detail' next_news.pk%}">{{ next_news.title|truncatechars:23 }}</a>
+                    {% else %}
+                    没有了
+                    {% endif %}
+                </li>
+                {% for each_n in next %}
+                <li>{{each_n.title}}</li>
+                {%empty%}
+                <li>no pre news...</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+  <div id="side">
+        <div class="sbox">
+        <ul class="c_list">
+            <li><a href="{% url 'home:news' 0%}" class="{% if type == '全部新闻' %}ns{% endif %}" title="全部新闻">全部新闻</a></li>
+              <li><a href="{% url 'home:news' 1%}" class="{% if type == '顺尚动态' %}ns{% endif %}" title="顺尚动态">顺尚动态</a></li>
+              <li><a href="{% url 'home:news' 2%}" class="{% if type == '行业资讯' %}ns{% endif %}" title="行业资讯">行业资讯</a></li>
+              <li><a href="{% url 'home:news' 3%}" class="{% if type == '净化技术' %}ns{% endif %}" title="净化技术">净化技术</a></li>
+        </ul>
+    </div>
+</div>
+  <div class="fc"></div>
+</div>
+{% endblock %}

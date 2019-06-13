@@ -1,0 +1,91 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}我的网站{% endblock %}</title>
+    <meta name="keywords" content="GMP车间,净化车间,净化工程,无尘车间,无尘车间工程,洁净室,深圳市永洁净化工程有限公司">
+    <meta name="description"
+        content="深圳市永洁净化工程有限公司成立于2007年，是中国专业提供空气净化系统工程整体解决方案的大型承建公司。业务范围：GMP车间、净化车间、无尘车间、洁净室、30万级—10级净化工程设计、安装等，另提供GMP车间的净化和设计、净化工程、无尘车间工程的净化/设计/施工、洁净室解决方案等，无尘车间、净化车间专业团队为您设计、施工、调试、检测和维护等一条龙服务。 - 深圳市永洁净化工程有限公司">
+    <meta http-equiv="imagetoolbar" content="no" />
+    <link rel="stylesheet" href="{% static 'mobile/js/swiper.min.css'%}">
+    <link rel="stylesheet" href="{% static 'mobile/css/base_cn.css'%}" media="screen,print" />
+    <link rel="stylesheet" href="{% static 'mobile/css/index_cn.css'%}" media="screen,print" />
+	{% block head_extends %}{% endblock %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+</head>
+
+<body>
+    <div class="header">
+        {% block top %}
+        <div class="top wrapper">
+            <h2 class="logo"><a title="深圳市永洁净化工程有限公司" href="{% url 'mobile:mobile'%}"><img
+                        src="{% static 'mobile/images/mlogo.jpg'%}" alt="深圳市永洁净化工程有限公司" /></a></h2>
+            <a href="" class="lang"></a>
+            <img src="{% static 'mobile/images/navbtn.png'%}" class="navBtn">
+        </div>
+        {% endblock %}
+
+        <div class="nav">
+            <div id="rootList" class="category-tab" data-cid="">
+                <ul id="nav">
+                    <li class="home active"><a class="psa" href="{% url 'mobile:mobile'%}">首页</a></li>
+                    <li data-id="26" class=""><a class="psa " href="javascript:;" title='净化工程案例'>净化工程案例 </a></li>
+                    <li data-id="48" class=""><a class="psa " href="{% url 'mobile:service'%}" title='售后服务保障'>售后服务保障 </a></li>
+                    <li data-id="2" class=""><a class="psa " href="{% url 'mobile:products' 0%}" title='净化设备'>净化设备 </a></li>
+                    <li data-id="3" class=""><a class="psa " href="javascript:;" title='新闻中心'>新闻中心 </a></li>
+                    <li data-id="1" class=""><a class="psa " href="javascript:;" title='关于我们'>关于我们 </a></li>
+                    <li class="quote"><a class="psa" href="{% url 'mobile:quote'%}">快速获取报价</a></li>
+                </ul>
+            </div>
+            <div class="category-content">
+                <div class="branchlist">
+                    <ul data-cid="26" style="display:none;">
+                        <li><a href="{% url 'mobile:solution' %}">全部</a></li>
+                        <li><a href="{% url 'mobile:solution_detail' 1%}">电子车间 12</a></li>
+                        <li><a href="{% url 'mobile:solution_detail' 2%}">制药GMP 净化12工程</a></li>
+                        <li><a href="{% url 'mobile:solution_detail' 3%}">医院手术室 装21修工程</a></li>
+                        <li><a href="{% url 'mobile:solution_detail' 4%}">食品日化 净化21工程</a></li>
+                    </ul>
+
+                    <ul data-cid="3" style="display:none;">
+                        <li><a href="{% url 'mobile:news' 0%}">全部</a></li>
+                        <li><a href="">永杰动态</a></li>
+                        <li><a href="">行业资讯</a></li>
+                        <li><a href="">净化技术</a></li>
+                    </ul>
+                    <ul data-cid="1" style="display:none;">
+                        <li><a href="{% url 'mobile:about' 1%}">公司简介</a></li>
+                        <li><a href="{% url 'mobile:about' 2%}">文化理念</a></li>
+                        <li><a href="{% url 'mobile:honer'%}">荣誉资质</a></li>
+                        <li><a href="{% url 'mobile:about' 3%}">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+	</div>
+        {% block content %}{% endblock %}
+        <div class="copyright cf">版权所有&copy; 深圳市永洁净化工程有限公司 粤ICP备09084048号-1 &nbsp;
+        </div>
+        <footer data-role="footer" data-position="fixed" id="footer" class="foot">
+            <div class="smartTool">
+                <a href="tel:13922861150"><i class="micon-tel"></i>打电话</a>
+                <a href="sms:13922861150"><i class="micon-sms"></i>发短信</a>
+
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3152958820&site=qq&menu=yes"><i class="micon-fqq"></i><em
+                        class="arial">QQ</em>咨询</a>
+                <a href="/Onepage/index/l/cn/id/67.html"><i class="micon-map"></i>查地图</a>
+            </div>
+        </footer>
+        <div class="back-top">
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=3152958820&site=qq&menu=yes" class="qq" target="_blank"></a>
+            <a href="#" class="gtop"></a>
+        </div>
+        <script src="{% static 'mobile/js/jquery-1.11.3.min.js' %}"></script>
+        {% block script_extends %}{% endblock %}
+        <script src="{% static 'mobile/js/common.js' %}"></script>
+</body>
+</html>

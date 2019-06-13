@@ -1,0 +1,46 @@
+{% extends 'mobilebase.html' %}
+{% load staticfiles %}
+{% block head_extends %}
+<link rel="stylesheet" href="{% static 'mobile/css/product_cn.css' %}" media="screen,print"/>
+
+{% endblock %}
+{% block content%}
+
+
+
+<div class="container">
+<div class="prod-main">
+    <div class="prod_detail">
+        <h1 class="title">{{case.title}}</h1>
+
+        <div class="swiper-container pics">
+            <div class="swiper-wrapper">
+                {%for each_image in images%}
+                <div class="swiper-slide"><a href="javascript:;"><img src="/media/{{each_image.images}}" alt="{{case.title}}"/></a></div>
+                {%empty%}
+                没有图片...
+                {%endfor%}
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination pics-pagination"></div>
+        </div>
+
+
+        <div class="tit">设备详细介绍</div>
+
+
+            {% if case %}
+                <div class="desc">
+                    {{case.detail|safe}}
+                </div>
+            {%else%}
+                <div class="noinfo">暂无内容显示，请稍候...或 <a href="{% url 'mobile:about' 1%}" target="_blank">联系我们</a>！</div>
+            {%endif%}
+        </div>
+
+    <div class="pnav">
+
+    </div>
+</div>
+</div>
+{% endblock %}

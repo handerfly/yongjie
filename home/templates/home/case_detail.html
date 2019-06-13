@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head_extends %}
+<link rel="stylesheet" href="{% static 'css/pic_cn.css' %}" media="screen,print"/>
+{% endblock %}
+{% block content%}
+
+<div class="tbanner">
+   <div class="banner" style=""></div>
+        <img src="{% static 'images/banner.jpg' %}" alt="">
+</div>
+<div class="mapnav">
+    <div class="wrapper">
+        <a href="{% url 'home'%}">首页</a> <em>&gt;</em>
+        <a href="{% url 'home:cases' case.solution.id%}"  class="ns">{{case.solution.title}}</a>&nbsp;&gt;&nbsp;{{case.title}}
+    </div>
+</div>
+<div class="wrapper case_details">
+    <div class="case_xg">
+        <h2>相关工程案例</h2>
+        <ul class="list cf">
+            {% for each_case in relate_cases %}
+                {% if not each_case.id == case.id %}
+                    <li class="">
+                        <a href="{% url 'home:case_detail' each_case.id%}" title="{{each_case.title}}" class="pic" target="_blank">
+                        <img src="/media/{{each_case.cover}}" alt="{{each_case.title}}" title="{{each_case.title}}"/></a>
+                    <a href="{% url 'home:case_detail' each_case.id%}" class="tt" target="_blank">{{each_case.title}}</a>
+                    </li>
+                {% endif %}
+
+            {%empty%}
+            暂时没有相关案例...
+            {%endfor%}
+        </ul>
+    </div>
+    <div class="case_detail">
+        <div class="detail">
+            <h1 class="title">{{case.title}}</h1>
+            <div class="pic imgs_tab">
+                <div class="picw">
+                    <div class="bfocus">
+                        <ul>
+                             {% for each_image in images %}
+                            <li><a href="javascript:;"><img src="/media/{{each_image.images}}" alt="{{case.title}}"/></a></li>
+                            {% empty %}
+                            暂时没有图片...
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+                <a href="javascript:;" class="prev"><i></i></a>
+                <a href="javascript:;" class="next"><i></i></a>
+            </div>
+            <div class="tit">
+               工程案例介绍
+            </div>
+            {% if case %}
+                <div class="desc">
+                    {{case.detail|safe}}
+                </div>
+            {%else%}
+                <div class="noinfo">暂无内容显示，请稍候...或 <a href="/about/list-67.html" target="_blank">联系我们</a>！</div>
+            {%endif%}
+        </div>
+        <div class="fc"></div>
+    </div>
+    <div class="fc"></div>
+</div>
+{% endblock %}

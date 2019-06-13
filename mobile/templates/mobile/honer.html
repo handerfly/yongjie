@@ -1,0 +1,29 @@
+{% extends 'mobilebase.html' %}
+{% load staticfiles %}
+{% block head_extends %}
+<link rel="stylesheet" href="{% static 'mobile/css/pic_cn.css' %}" media="screen,print"/>
+{% endblock %}
+{% block content%}
+<div class="container">
+<div id="main">
+    <div class="pic_list cf">
+        {% for each_honer in honer %}
+            <div class="li ">
+                <a rel="group" parm="bigpic" href="/media/{{ each_honer.images }}" title="{{ each_honer.title }}" class="pic" target="_blank">
+                    <img src="/media/{{ each_honer.images }}" alt="{{ each_honer.title }}" title="{{ each_honer.title }}"/></a>
+                <span class="tt">{{ each_honer.title }}</span>
+            </div>
+        {%empty%}
+            暂时没有荣誉资质...
+        {%endfor%}
+    </div>
+        <div class="fc"></div>
+        <ul id='pagination' class='pagination'  >    </ul>    </div>
+</div>
+{% endblock %}
+
+{% block script_extends %}
+<script src="{% static 'fancybox/jquery.fancybox.js' %}"></script>
+<link rel="stylesheet" href="{% static 'fancybox/jquery.fancybox-1.3.4.css' %}">
+{% endblock %}
+

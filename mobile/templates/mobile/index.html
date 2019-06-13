@@ -1,0 +1,155 @@
+﻿{% extends 'mobilebase.html' %}
+{% load staticfiles %}
+
+
+{% block content%}
+<div class="container">
+    <div class="tbanner">
+        <div class="swiper-container banner">
+            <div class="swiper-wrapper">
+                {%for each_image in banners %}
+                <div class="swiper-slide">
+                    <a href="{{each_image.url}}" target="{{each_image.open}}" style=""><img src="/media/{{each_image.image}}"></a>
+                </div>
+            {%endfor%}
+            </div>
+                    <!-- Add Pagination -->
+            <div class="swiper-pagination banner-pagination"></div>
+        </div>
+
+
+    </div>
+    <div class="solution">
+        <div class="wrapper">
+            <div class="mtitle">
+                <h2><span>净化是根本，永洁是目标</span><b></b></h2>
+            </div>
+            <ul class="cf">
+                {% for each_solution in solutions %}
+                    {% if forloop.counter|divisibleby:2 %}
+                    <li class="end">
+                        <a href="{% url 'mobile:solution_detail' each_solution.id%}" >
+                            <div class="pic"><img src="/media/{{each_solution.cover}}" alt="{{each_solution.title}}"/></div>
+                                <div class="desc">
+                                    {% if each_solution.title == "食品日化 净化工程" %}
+                                        <i class="bicon-s4"></i>
+                                    {% elif each_solution.title == "医院手术室 装修工程" %}
+                                        <i class="bicon-s3"></i>
+                                     {% elif each_solution.title == "制药GMP 净化工程" %}
+                                        <i class="bicon-s2"></i>
+                                     {% elif each_solution.title == "电子车间 净化工程" %}
+                                        <i class="bicon-s1"></i>
+                                    {% endif %}
+                                    <h3>{{each_solution.title}}</h3>
+                                </div>
+                        </a>
+                    </li>
+                    {% else %}
+                        <li class="">
+                        <a href="{% url 'mobile:solution_detail' each_solution.id%}" >
+                            <div class="pic"><img src="/media/{{each_solution.cover}}" alt="{{each_solution.title}}"/></div>
+                                <div class="desc">
+                                    {% if each_solution.title == "食品日化 净化工程" %}
+                                        <i class="bicon-s4"></i>
+                                    {% elif each_solution.title == "医院手术室 装修工程" %}
+                                        <i class="bicon-s3"></i>
+                                     {% elif each_solution.title == "制药GMP 净化工程" %}
+                                        <i class="bicon-s2"></i>
+                                     {% elif each_solution.title == "电子车间 净化工程" %}
+                                        <i class="bicon-s1"></i>
+                                    {% endif %}
+                                    <h3>{{each_solution.title}}</h3>
+                                </div>
+                        </a>
+                    </li>
+                    {% endif %}
+                {%empty%}
+                没有更多解决方案...
+                {% endfor%}
+            </ul>
+        </div>
+    </div>
+    <div class="case_list">
+        <div class="wrapper">
+            <div class="mtitle">
+                <h2><span>净化工程案例</span><b></b></h2>
+            </div>
+            <div class="bd">
+                <ul class="list cf">
+                    {%for each_case in cases%}
+                        {% if forloop.counter|divisibleby:4 %}
+                            <li class="end">
+                                <a href="{% url 'mobile:case_detail' each_case.id%}" title="{{each_case.title}}" class="pic" target="_blank">
+                                    <img src="/media/{{each_case.cover}}" alt="{{each_case.title}}" title="{{each_case.title}}"/></a>
+                                <a href="" class="tt" target="_blank">{{each_case.title}}</a>
+                            </li>
+                        {%else%}
+                            <li class="">
+                                <a href="{% url 'mobile:case_detail' each_case.id%}" title="{{each_case.title}}" class="pic" target="_blank">
+                                    <img src="/media/{{each_case.cover}}" alt="{{each_case.title}}" title="{{each_case.title}}"/></a>
+                                <a href="{% url 'mobile:case_detail' each_case.id%}" class="tt" target="_blank">{{each_case.title}}</a>
+                            </li>
+                        {%endif%}
+                    {%empty%}
+                    暂时没有案例...
+                    {%endfor%}
+                </ul>
+            </div>
+            <div class="fd"><a href="{% url 'mobile:solution'%}" class="btn btn-bblue more">查看更多案例</a></div>
+        </div>
+    </div>
+    <div class="certification">
+        <h2 class="hd">公司荣誉</h2>
+        <div class="bd">
+            <ul>
+                {%for each_honer in honer %}
+                        {% if forloop.counter|divisibleby:4 %}
+                            <li class="end">
+                                <a href="{% url 'mobile:honer'%}" class="pic" target="_blank" title="{{each_honer.title}}">
+                                    <img src="/media/{{each_honer.images}}" alt="{{each_honer.title}}" /></a>
+                                <h3><a href="{% url 'mobile:honer'%}" target="_blank" title="{{each_honer.title}}">{{each_honer.title}}</a></h3>
+                            </li>
+                        {%else%}
+                            <li class="">
+                                <a href="{% url 'mobile:honer'%}" class="pic" target="_blank" title="{{each_honer.title}}">
+                                    <img src="/media/{{each_honer.images}}" alt="{{each_honer.title}}" /></a>
+                                <h3><a href="{% url 'mobile:honer'%}" target="_blank" title="{{each_honer.title}}">{{each_honer.title}}</a></h3>
+                            </li>
+                        {%endif%}
+                        {%empty%}
+                        暂时没有荣誉...
+                        {%endfor%}
+            </ul>
+        </div>
+        <div class="fd"><a href="{% url 'mobile:honer'%}" class="btn btn-bblue more">查看更多</a></div>
+    </div>
+    <div class="news-panel cf">
+        <div class="hd">
+            {%for news_type in news.keys %}
+                <a href="javascript:;" class="{% if forloop.counter == 1 %}active{% endif  %}">{{news_type.title}}</a>
+            {%empty%}
+            没有新闻分类...
+            {% endfor%}
+        </div>
+        <div class="news box">
+            {%for news_type,news_objs in news.items %}
+                <ul style="{% if forloop.counter == 1 %}display:block{% endif  %}">
+                    {% for each_news in news_objs %}
+                    <li><em>&gt;</em><a href="{% url 'mobile:news_detail' each_news.id%}">{{each_news.title|truncatechars:50}}</a></li>
+                    {%empty%}
+                    没有新闻...
+                    {% endfor%}
+                </ul>
+            {%empty%}
+            没有新闻分类...
+            {% endfor%}
+        </div>
+        <div class="fd">
+            <a href="{% url 'mobile:news' 0%}" class="btn btn-bblue more">查看更多</a>
+        </div>
+    </div>
+</div>
+   
+{% endblock %}
+
+

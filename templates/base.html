@@ -1,0 +1,251 @@
+{% load staticfiles %}
+{% url "home:lab" as url_lab %}
+{% url "home:service" as url_service %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>{% block title %}我的网站{% endblock %}</title>
+    <!-- 手机浏览自动跳转到触屏版 开始 -->
+    <script type="text/javascript" src="{% static 'js/check_mobile.js'%}"></script>
+    <!--手机浏览自动跳转到触屏版 结束 -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="imagetoolbar" content="no"/>
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/base_cn.css' %}" media="screen,print"/>
+    {% block head_extends %}{% endblock %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+</head>
+<body>
+<div class="header">
+    <div class="tnav">
+        <div class="wrapper">
+            <div class="notice">欢迎您来到广州顺尚净化工程有限公司，期待与您合作！</div>
+        </div>
+    </div>
+    <div class="top wrapper">
+        <h2 class="logo">
+            <a title="广州顺尚净化工程有限公司" href="/">
+            <img src="{% static 'images/logo.jpg'%}" alt="广州顺尚净化工程有限公司"/>
+            </a>
+        </h2>
+        <div class="tel">
+            <i class="icon-tel"></i>
+            24小时服务热线<br/>
+            <strong>020-39021926</strong>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="wrapper">
+            <ul class="cf">
+                <li class="home"><a  class="psa {% if request.get_full_path == '/' %}active{% endif %}" href="{% url 'home'%}">首页</a></li>
+                <li class="">
+                    <a class="psa {% if request.get_full_path|slice:'14' == '/home/solution' %}active{% endif %}" href="{% url 'home:solution'%}" title='解决方案' >净化系统</a>
+                        <div class="subnav">
+                            <div class="wrapper">
+                                <ul class="sub-menu cf">
+                                    <li><a href="{% url 'home:solution_detail' 1%}" title='电子车间 净化工程' class="" >● 电子车间 净化工程</a></li>
+                                    <li><a href="{% url 'home:solution_detail' 2%}" title='制药GMP 净化工程' class="" >● 制药GMP 净化工程</a></li>
+                                    <li><a href="{% url 'home:solution_detail' 3%}" title='医院手术室 装修工程' class="" >● 医院手术室 装修工程</a></li>
+                                    <li><a href="{% url 'home:solution_detail' 4%}" title='食品日化 净化工程' class="" >● 食品日化 净化工程</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                </li>
+                <li class=""><a class="psa {% if request.path == url_lab %}active{% endif %}" href="{% url 'home:lab'%}" title='净化设备' >实验室系统</a></li>
+                <li class=""><a class="psa {% if request.get_full_path|slice:'10' == '/home/case' %}active{% endif %}" href="{% url 'home:cases' 0%}" title='成功案例' >成功案例</a></li>
+                <li class="">
+                    <a class="psa {% if request.get_full_path|slice:'13' == '/home/product' %}active{% endif %}" href="{% url 'home:products' 0%}" title='产品中心' >产品中心</a>
+                    <div class="subnav">
+                            <div class="wrapper">
+                                <ul class="sub-menu cf">
+                                    <li><a href="{% url 'home:products' 1%}" title='净化系统设备' class="" >● 净化系统设备</a></li>
+                                    <li><a href="{% url 'home:products' 2%}" title='实验室系统设备' class="" >● 实验室系统设备</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                </li>
+                <li class=" omenu">
+                    <a class="psa {% if request.get_full_path|slice:'10' == '/home/news' %}active{% endif %}" href="{% url 'home:news' 0%}" title='新闻中心' >行业资讯</a>
+                    <div class="subnav">
+                        <div class="wrapper">
+                            <ul class="sub-menu cf">
+                                <li><a href="{% url 'home:news' 1%}" title='顺尚动态' class="" >● 顺尚动态</a></li>
+                                <li><a href="{% url 'home:news' 2%}" title='行业资讯' class="" >● 行业资讯</a></li>
+                                <li><a href="{% url 'home:news' 3%}" title='净化技术' class="" >● 净化技术</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class=" omenu"><a class="psa {% if request.path == url_service %}active{% endif %}" href="{% url 'home:service'%}" title='售后服务保障' >售后服务</a></li>
+                <li class=" omenu">
+                    <a class="psa {% if request.get_full_path|slice:'11' == '/home/about' or request.get_full_path|slice:'11' == '/home/honer'%}active{% endif %}" href="{% url 'home:about' 1%}" title='关于我们' >关于我们</a>
+                    <div class="subnav">
+                        <div class="wrapper">
+                            <ul class="sub-menu cf">
+                                <li><a href="{% url 'home:about' 1 %}" title='公司简介' class="" >● 公司简介</a></li>
+                                <li><a href="{% url 'home:about' 2%}" title='文化理念' class="" >● 文化理念</a></li>
+                                <li><a href="{% url 'home:honer'%}" title='荣誉资质' class="" >● 荣誉资质</a></li>
+                                <li><a href="{% url 'home:about' 3 %}" title='联系我们' class="" >● 联系我们</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="quote"><a class="psa" href="javascript:;">快速获取报价<i class="icon-hot"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% block content %}
+
+{% endblock %}
+
+<!-- 关注开始-->
+<div class="guanzhu">
+    <h2>您也可以用手机关注我们</h2>
+    <p>
+        <span><img src="http://www.yongjiejh.com/Data/Pic/57fc545d1312d.jpg" width="130" height="130"/><br/><em>手机站</em></span>
+        <span><img src="http://www.yongjiejh.com/Data/Pic/57fc545d1312d.jpg" width="130" height="130"/><br/><em>公众号</em></span>
+    </p>
+</div>
+<!-- 关注结束-->
+<!-- footer开始-->
+<div class="footer">
+    <div class="fnav">
+        <ul class="wrapper cf">
+            <li class="c1">
+                <a class="psa" href="{% url 'home:solution'%}" title='净化工程案例' >净化工程案例</a>
+                <ul class="sub">
+                    <li><a href="{% url 'home:solution'%}" title='电子车间 净化工程' >电子车间 净化工程</a></li>
+                    <li><a href="{% url 'home:solution'%}" title='制药GMP 净化工程' >制药GMP 净化工程</a></li>
+                    <li><a href="{% url 'home:solution'%}" title='医院手术室 装修工程' >医院手术室 装修工程</a></li>
+                    <li><a href="{% url 'home:solution'%}" title='食品日化 净化工程' >食品日化 净化工程</a></li>
+                    <li><a href="javascript:;" class="quote">快速获取报价</a></li>
+                </ul>
+            </li>
+            <li class="c3">
+                <a class="psa" href="{% url 'home:service'%}" title='售后服务保障' >售后服务保障</a>
+                <ul class="sub">
+                    <li><a href="{% url 'home:service'%}" title='服务保障' >服务保障</a></li>
+                    <li><a href="{% url 'home:service'%}" title='服务流程' >服务流程</a></li>
+                    <li><a href="{% url 'home:service'%}" title='售后咨询' >售后咨询</a></li>
+                </ul>
+            </li>
+            <li class="c4">
+                <a class="psa" href="{% url 'home:products' 0%}" title='净化设备' >净化设备</a>
+                <ul class="sub">
+                    <li><a href="{% url 'home:products' 0%}" title='空调设备' >空调设备</a></li>
+                    <li><a href="{% url 'home:products' 0%}" title='净化通风' >净化通风</a></li>
+                    <li><a href="{% url 'home:products' 0%}" title='结构装修' >结构装修</a></li>
+                    <li><a href="{% url 'home:products' 0%}" title='电器照明' >电器照明</a></li>
+                    <li><a href="{% url 'home:products' 0%}" title='其他特殊设备' >其他特殊设备</a></li>
+                    <li><a href="{% url 'home:products' 0%}" >更多设备</a></li>
+                </ul>
+            </li>
+            <li class="c5">
+                <a class="psa" href="{% url 'home:news' 0%}" title='新闻中心' >新闻中心</a>
+                <ul class="sub">
+                    <li><a href="{% url 'home:news' 1%}" title='永洁动态' >永洁动态</a></li>
+                    <li><a href="{% url 'home:news' 2%}" title='行业资讯' >行业资讯</a></li>
+                    <li><a href="{% url 'home:news' 3%}" title='净化技术' >净化技术</a></li>
+                </ul>
+            </li>
+            <li class="c6">
+                <a class="psa" href="{% url 'home:about' 1%}" title='关于我们' >关于我们</a>
+                <ul class="sub">
+                    <li><a href="{% url 'home:about' 1%}" title='公司简介' >公司简介</a></li>
+                    <li><a href="{% url 'home:about' 2%}" title='文化理念' >文化理念</a></li>
+                    <li><a href="{% url 'home:honer'%}" title='荣誉资质' >荣誉资质</a></li>
+                    <li><a href="{% url 'home:about' 3%}" title='联系我们' >联系我们</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="copyright cf">版权所有&copy; 深圳市永洁净化工程有限公司   粤ICP备09084048号-1
+</div>
+    </div>
+</div>
+<!-- footer结束-->
+<!-- 在线客服开始-->
+<div class="onlinebox online-right " data-rel="right:100">
+            <div class="hd cn"><a href="javascript:void(0);"></a></div>
+            <div class="bd" id="divFloatToolsView">
+                <div class="con">
+                    <h3 class="titZx">在线客服</h3>
+                    <ul><li>
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2930126359&site=qq&menu=yes">
+                            <span class="img">
+                            <img border="0" src="http://wpa.qq.com/pa?p=2:2930126359:41" alt="广州顺尚净化工程有限公司" title="广州顺尚净化工程有限公司"/>
+                            </span>
+                            <span class="tit">顺尚</span>
+                        </a>
+
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<!-- 报在线客服结束-->
+<!-- 报价表单开始-->
+<script type="text/template" id="dialog">
+    <div class="bdialog">
+        <div class="quote-bd">
+            <div class="hd"><em>30秒，</em>快速获取报价</div>
+            <div class="bd">
+                <form  class="bjbox" enctype="multipart/form-data" autocomplete="off" method="post">
+                    <ul class="form">
+                        {% csrf_token %}
+                        <li>
+                            <span class="th"><em>*</em>车间面积</span>
+                            <div class="field">
+                                <input type="number" max="1000000" min="1" class="tb tb90 mr10" name="area">
+                                <span class="desc">m²</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="th"><em>*</em>净化级别</span>
+                            <div class="field">
+                                <select name="level" class="select">
+                                    <option value="">请选择</option>
+                                    <option value="1">三十万级净化工程</option>
+                                    <option value="2">十万级净化工程</option>
+                                    <option value="3"> 万级净化工程</option>
+                                    <option value="4"> 千级净化工程</option>
+                                    <option value="5">百级净化工程</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="th"><em>*</em>您的姓名</span>
+                            <div class="field">
+                                <input type="text" class="tb tb120 mr10" name="name">
+                                <span class="radio mr20"><input type="radio" name="sex" class="" value="1" title="先生"><label for="undefined">先生</label></span>
+                                <span class="radio mr20"><input type="radio" name="sex" class="" value="2" title="女士"><label for="undefined">女士</label></span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="th"><em>*</em>手机号</span>
+                            <div class="field"><input type="text" class="tb tb155" name="mobile"></div>
+                        </li>
+                        <li class="tip">*请输入真实手机号，报价将会以短信的形式发送到您的手机上</li>
+                    </ul>
+                </form>
+            </div>
+            <div class="fd">
+                <button class="btn btn-blue submit">点击获取</button>
+            </div>
+        </div>
+    </div>
+</script>
+<!--报价表单结束-->
+
+<script src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+<script src="{% static 'layer/layer.js' %}"></script>
+{% block script_extends %}{% endblock %}
+<script src="{% static 'js/common.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+{% extends 'mobilebase.html' %}
+{% load staticfiles %}
+{% block head_extends %}
+<link rel="stylesheet" href="{% static 'mobile/css/product_cn.css' %}" media="screen,print"/>
+{% endblock %}
+{% block content%}
+
+
+<div class="container">
+<div class="category">
+    <div class="wrapper">
+        <div class="con">
+            <h2>净化设备展示</h2>
+            <p>永洁净化精挑细选优秀的净化设备合作伙伴<br/>
+                为所有客户提供质量过硬、价格公道、服务优质的净化产品<br/>
+                保障所有工程项目能够准时安装使用，并且在日后的维护中，排除设备故障所导致的损失</p>        </div>
+    </div>
+</div>
+<div class="catelist cf">
+    <ul>
+        <li class="{% if type == 0 %}active{% endif %}"><a href="{% url 'mobile:products' 0 %}">全部</a></li>
+        {% for each_product_type in product_types %}
+            <li class="{% if type == each_product_type.id %}active{% endif %}"><a href="{% url 'mobile:products' each_product_type.id %}" class="{% if each_product_type.id == type %}active{% endif %}" title="{{each_product_type.title}}">{{each_product_type.title}}</a></li>
+        {% empty %}
+        暂时没有分类...
+        {% endfor %}
+    </ul>
+</div>
+<div class="prod_list">
+    <ul class="cf list">
+        {% for each_product in page_of_obj %}
+            {% if forloop.counter|divisibleby:5 %}
+                <li>
+                    <a href="{% url 'mobile:product_detail' each_product.id%}" class="pic"><img src="/media/{{each_product.cover}}" alt="{{each_product.title}}"/></a>
+                    <h3 class="tt"><a href="{% url 'mobile:product_detail' each_product.id%}" title="{{each_product.title}}">{{each_product.title}}</a></h3>
+                </li>
+            {%else%}
+                <li class="end">
+                    <a href="{% url 'mobile:product_detail' each_product.id%}" class="pic"><img src="/media/{{each_product.cover}}" alt="{{each_product.title}}"/></a>
+                    <h3 class="tt"><a href="{% url 'mobile:product_detail' each_product.id%}" title="{{each_product.title}}">{{each_product.title}}</a></h3>
+                </li>
+            {%endif%}
+        {% empty %}
+        暂时没有产品...
+        {%endfor%}
+
+    </ul>
+        <div class="fc"></div>
+    <ul id='pagination' class='pagination'  >
+        {% ifnotequal  count 0 %}
+                {% ifnotequal  count 1 %}
+                    {# 上一页 #}
+
+                    {% if page_of_obj.has_previous %}
+                        <li><a href="?page={{ page_of_obj.previous_page_number }}"  title="上一页"> 上一页 </a></li>
+                    {% endif %}
+
+                    {# 全部页码 #}
+                    {% for page_num in page_range %}
+                        {% if page_num == page_of_obj.number %}
+                            <li><a href="?page={{ page_num }}" class="current">{{ page_num }}</a></li>
+                        {% else %}
+                               <li><a href="?page={{ page_num }}" title="第{{page_num}}页">{{ page_num }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {# 下一页 #}
+
+                    {% if page_of_obj.has_next %}
+                        <li><a href="?page={{ page_of_obj.next_page_number }}"  title="下一页">下一页</a></li>
+                    {% else %}
+                        &raquo;
+                    {% endif %}
+                {% endifnotequal  %}
+            {% endifnotequal  %}
+    </ul>
+</div>
+</div>
+{% endblock %}

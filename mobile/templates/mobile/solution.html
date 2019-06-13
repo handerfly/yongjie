@@ -1,0 +1,32 @@
+{% extends 'mobilebase.html' %}
+{% load staticfiles %}
+{% block head_extends %}
+<link rel="stylesheet" href="{% static 'mobile/css/pic_cn.css' %}" media="screen,print"/>
+{% endblock %}
+{% block content%}
+
+<div class="container">
+    <div class="app_bd cf">
+        <div class="app_list cf">
+            {% for each_solution in solutions %}
+            <div class="li cf">
+                <a href="{% url 'mobile:solution_detail' each_solution.id%}">
+                    <div class="pic"><img src="/media/{{each_solution.cover}}" alt="{{each_solution.title}}" title="{{each_solution.title}}"/></div>
+                    <div class="desc">
+                        <h2>{{each_solution.title}}</h2>
+                        <div class="con">{{each_solution.detail|safe|striptags|truncatechars:220  }}...</div>
+                    </div>
+                </a>
+            </div>
+            {%empty%}
+            暂时没有解决方案...
+            {%endfor%}
+
+        </div>
+        <div class="fc"></div>
+        <ul id='pagination' class='pagination'  >
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head_extends %}
+<link rel="stylesheet" href="{% static 'css/onepage_cn.css' %}" media="screen,print"/>
+{% endblock %}
+{% block content%}
+
+<div class="tbanner">
+   <div class="banner" style=""></div>
+        <img src="{% static 'images/banner.jpg' %}" alt="">
+</div>
+<div class="mapnav">
+    <div class="wrapper">
+        <a href="{% url 'home:home'%}">首页</a> <em>&gt;</em>
+        {{ title }}
+    </div>
+</div>
+<div id="main_content">
+    <div id="main">
+    <div class="dy-content">
+    {{ about.content|safe }}
+    </div>
+</div>
+  <div id="side">
+       <div class="sbox">
+          <ul class="c_list">
+              <li><a href="{% url 'home:about' 1%}" class="{% if about.id == 1 %}ns{% endif %}" title="公司简介">公司简介</a></li>
+              <li><a href="{% url 'home:about' 2%}" class="{% if about.id == 2 %}ns{% endif %}" title="文化理念">文化理念</a></li>
+              <li><a href="{% url 'home:honer' %}" class="" title="荣誉资质">荣誉资质</a></li>
+              <li><a href="{% url 'home:about' 3%}" class="{% if about.id == 3 %}ns{% endif %}" title="联系我们">联系我们</a></li>
+          </ul>
+       </div>
+</div>
+  <div class="fc"></div>
+</div>
+{% endblock %}

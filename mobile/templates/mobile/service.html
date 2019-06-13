@@ -1,0 +1,43 @@
+{% extends 'mobilebase.html' %}
+{% load staticfiles %}
+{% block head_extends %}
+<link rel="stylesheet" href="{% static 'mobile/css/onepage_cn.css' %}" media="screen,print"/>
+{% endblock %}
+
+{% block top %}
+<div class="top wrapper">
+    <a class="back" href="javascript:history.back()"><i class="icon-back"></i></a>
+    <h2 class="tit">净化工程案例</h2>
+    <a href="" class="lang"></a>
+    <img src="http://m.yongjiejh.com/Public/m/images/navBtn.png" class="navBtn">
+</div>
+{% endblock %}
+
+{% block content%}
+
+<div class="container">
+<div class="service cf">
+    <div class="pic"><img src="http://m.yongjiejh.com/Public/home/images/service01.jpg"/></div>
+    <div class="desc">
+        {{ service.content|safe }}
+
+      </br> </br> </br>
+        <div class="fd cf">
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=3152958820&site=qq&menu=yes" target="_blank" class="btn btn-blue btn-w136">售后QQ咨询</a>
+            <a href="67.html" target="_blank" class="btn btn-blue">售后：0755-89725806</a>
+        </div>
+    </div>
+</div>
+<div class="service_lc">
+    <div class="wrapper">
+        <h2 class="tit">
+	专业的施工服务流程，保障工程保质保量完成
+</h2>
+<div class="desc" align="center">
+	<img src="../../../../../Data/Editor/57c9e72d62a82.jpg" alt="" /><br />
+</div>
+    </div>
+</div>
+
+</div>
+{% endblock %}

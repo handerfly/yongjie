@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head_extends %}
+<link rel="stylesheet" href="{% static 'css/pic_cn.css' %}" media="screen,print"/>
+{% endblock %}
+{% block content%}
+
+<div class="tbanner">
+    <div class="banner" style=""></div>
+        <img src="{% static 'images/banner.jpg' %}" alt="">
+    </div>
+<div class="mapnav">
+    <div class="wrapper">
+        <a href="{% url 'home:home'%}">首页</a> <em>&gt;</em>
+        <a href="{% url 'home:solution' %}"  class="ns">净化工程案例</a>
+    </div>
+</div>
+<div id="main_content">
+    <div class="app_detail">
+        <div class="pic">
+            <img src="/media/{{solution.cover}}" alt="{{solution.title}}"/>
+        </div>
+        <div class="detail">
+            <h1 class="title">实验室系统</h1>
+            <div class="intro">{{solution.detail|striptags|truncatechars:120  }}</div>
+            <div class="desc">
+                {{solution.detail|safe }}
+            </div>
+            <a href="javascript:;" class="showmore"  data-rel="更多介绍|收起" data-v="0"><i>+</i> 更多介绍</a>
+            <h2 class="chathd">工程咨询</h2>
+            <div class="chat cf">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3152958820&site=qq&menu=yes" target="_blank" class="btn btn-blue">QQ在线</a>
+                <a href="/about/list-67.html" target="_blank" class="btn btn-blue">电话：0755-89725806</a>
+                <a href="javascript:;" class="btn btn-blue quote">快速<em>获取报价</em></a>
+            </div>
+        </div>
+        <div class="fc"></div>
+    </div>
+    <div class="app_case appbox">
+        <h2>工程案例</h2>
+        <div class="catelist cf">
+            <a href="javascript:;" data-id="0" class="home active">全部</a>
+            <a href="javascript:;" data-id="105" class="" title="三十万级净化工程">三十万级净化工程</a>
+            <a href="javascript:;" data-id="106" class="" title="十万级净化工程">十万级净化工程</a>
+            <a href="javascript:;" data-id="107" class="" title="万级净化工程">万级净化工程</a>
+            <a href="javascript:;" data-id="108" class="" title="千级净化工程">千级净化工程</a>
+            <a href="javascript:;" data-id="109" class="" title="百级净化工程">百级净化工程</a>
+        </div>
+        <ul class="list cf">
+            {% for each_case in relate_cases %}
+            <li data-cid="{{each_case.type|add:104}}">
+                <a href="{% url 'home:case_detail' each_case.id%}" title="{{each_case.title}}" class="pic" target="_blank">
+                    <img src="/media/{{each_case.cover}}" alt="{{each_case.title}}" title="{{each_case.title}}"/></a>
+                <a href="/case/26.html" class="tt" target="_blank">{{each_case.title}}{{each_case.type|add:104}}</a>
+            </li>
+            {% empty%}
+            暂时没有相关案例...
+            {%endfor%}
+        </ul>
+    </div>
+    <div class="otherapp appbox">
+        <h2>更多净化工程案例</h2>
+        <div class="bd">
+            <ul class="cf">
+                 {% for each_solution in more_solutions %}
+                    {% if forloop.counter|divisibleby:2 %}
+                    <li class="end">
+                        <a href="{% url 'home:solution_detail' each_solution.id%}" >
+                            <div class="pic"><img src="/media/{{each_solution.cover}}" alt="{{each_solution.title}}"/></div>
+                                <div class="desc">
+                                    {% if each_solution.title == "化工类 净化工程" %}
+                                        <i class="bicon-s2"></i>
+                                    {% elif each_solution.title == "化妆品车间 净化工程" %}
+                                        <i class="bicon-s1"></i>
+                                    {% elif each_solution.title == "实验室系统" %}
+                                        <i class="bicon-s3"></i>
+                                    {% elif each_solution.title == "食品日化 净化工程" %}
+                                        <i class="bicon-s4"></i>
+                                    {% elif each_solution.title == "医院手术室 装修工程" %}
+                                        <i class="bicon-s5"></i>
+                                     {% elif each_solution.title == "医药、医疗GMP车间" %}
+                                        <i class="bicon-s6"></i>
+                                     {% elif each_solution.title == "电子车间 净化工程" %}
+                                        <i class="bicon-s7"></i>
+                                    {% endif %}
+                                    <h3>{{each_solution.title}}</h3>
+                                </div>
+                        </a>
+                    </li>
+                    {% else %}
+                        <li class="">
+                        <a href="{% url 'home:solution_detail' each_solution.id%}" >
+                            <div class="pic"><img src="/media/{{each_solution.cover}}" alt="{{each_solution.title}}"/></div>
+                                <div class="desc">
+                                    {% if each_solution.title == "化工类 净化工程" %}
+                                        <i class="bicon-s2"></i>
+                                    {% elif each_solution.title == "化妆品车间 净化工程" %}
+                                        <i class="bicon-s1"></i>
+                                    {% elif each_solution.title == "实验室系统" %}
+                                        <i class="bicon-s3"></i>
+                                    {% elif each_solution.title == "食品日化 净化工程" %}
+                                        <i class="bicon-s4"></i>
+                                    {% elif each_solution.title == "医院手术室 装修工程" %}
+                                        <i class="bicon-s5"></i>
+                                     {% elif each_solution.title == "医药、医疗GMP车间" %}
+                                        <i class="bicon-s6"></i>
+                                     {% elif each_solution.title == "电子车间 净化工程" %}
+                                        <i class="bicon-s7"></i>
+                                    {% endif %}
+                                    <h3>{{each_solution.title}}</h3>
+                                </div>
+                        </a>
+                    </li>
+                    {% endif %}
+                {%empty%}
+                没有更多解决方案...
+                {% endfor%}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

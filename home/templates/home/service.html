@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head_extends %}
+<link rel="stylesheet" href="{% static 'css/onepage_cn.css' %}" media="screen,print"/>
+{% endblock %}
+{% block content%}
+
+
+<div class="tbanner">
+    <div class="banner" style=""></div>
+        <img src="{% static 'images/banner.jpg' %}" alt="">
+    </div>
+<div class="mapnav">
+    <div class="wrapper">
+        <a href="../yongjiejh.html">首页</a> <em>&gt;</em> <a href="service.html"  class="ns">售后服务保障</a>    </div>
+</div>
+<div class="service wrapper cf">
+    <div class="pic"><img src="http://www.yongjiejh.com/Public/home/images/service01.jpg"/></div>
+    <div  class="desc">
+        <div>{{ service.content|safe }}</div>
+
+        </br> </br> </br>
+        <div class="fd cf">
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2930126359&site=qq&menu=yes"  class="btn btn-blue">售后QQ咨询</a>
+            <a href="{% url 'home:about' 3%}" target="_blank" class="btn btn-blue">电话：020-39021926</a>
+        </div>
+    </div>
+</div>
+<div class="service_lc">
+    <div class="wrapper">
+        <h2 class="tit">
+	专业的施工服务流程，保障工程保质保量完成
+</h2>
+<div class="desc" align="center">
+	<img src="http://yongjiejh.com/Data/Editor/57c9e72d62a82.jpg" alt="" /><br />
+</div>    </div>
+</div>
+<div class="fnews">
+    <div class="wrapper">
+        <h2 class="hd">常见问题 & 解决办法</h2>
+        <div class="bd cf">
+            <ul class="c1">
+                {% for each_faq in faq %}
+                <li>
+                    <a href="../news/97.html" title="{{ each_faq.title }}？">
+                        <h3><em>?</em><span>{{ each_faq.title|truncatechars:29 }}</span></h3>
+                        <p>                            
+	                    {{ each_faq.content|striptags|truncatechars:120 }}...</p>
+                        </a>
+                </li>
+                {%empty%}
+                暂时没有Faq...
+                {%endfor%}
+            </ul>
+        </div>
+        <div class="fd"><a class="btn btn-bblue more" href="../news/list-99.html">查看更多</a></div>
+    </div>
+</div>
+
+{% endblock %}
