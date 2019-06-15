@@ -7,12 +7,12 @@
 
 <div class="tbanner">
     <div class="banner" style=""></div>
-        <img src="{% static 'images/banner.jpg' %}" alt="">
+        <img src="{% static 'images/banner.jpg' %}" alt="" width="100%">
     </div>
 <div class="mapnav">
     <div class="wrapper">
         <a href="/">首页</a> <em>&gt;</em>
-        <a href="{% url 'home:products' product.type.id%}" >{{product.type.title}}</a> <em>&gt;</em>
+        <a href="{% url 'home:products' product.type.id product.sub_type %}" >{{product.type.title}}</a> <em>&gt;</em>
         {{product.title}}
     </div>
 </div>
@@ -20,8 +20,10 @@
         <div class="prodlist">
             <h2>设备分类</h2>
             <ul>
-                {% for each_product_type in product_types %}
-                <li><a href="{% url 'home:products' each_product_type.id%}" class="{% if each_product_type.id == type %}active{% endif %}" title="净化通风">{{each_product_type.title}}</a></li>
+
+                {% for each_sub_type in sub_type %}
+                <li><a href="{% url 'home:products' type each_sub_type %}" class="{% if product.sub_type == each_sub_type %}active{% endif %}"
+                       title="净化通风">{{each_sub_type}}</a></li>
                 {%empty%}
                     暂时没有分类...
                 {%endfor%}
@@ -34,7 +36,11 @@
                     <div class="bfocus">
                         <ul>
                             {% for each_image in images %}
-                            <li><a href="javascript:;"><img src="/media/{{each_image.images}}" alt="{{product.title}}"/></a></li>
+                            <li>
+                                <a href="javascript:;">
+                                <img src="/media/{{each_image.images}}" alt="{{product.title}}" max-width="100%" width="100%"  height="388px" />
+                                </a>
+                            </li>
                             {% empty %}
                             暂时没有图片...
                             {%endfor%}

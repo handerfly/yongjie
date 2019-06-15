@@ -7,12 +7,12 @@
 
 <div class="tbanner">
    <div class="banner" style=""></div>
-        <img src="{% static 'images/banner.jpg' %}" alt="">
+        <img src="{% static 'images/banner.jpg' %}" alt="" width="100%">
 </div>
 <div class="mapnav">
     <div class="wrapper">
         <a href="{% url 'home:home'%}">首页</a> <em>&gt;</em>
-        <a href="{% url 'home:products' type%}"  class="ns">净化设备</a>
+        <a href="{% url 'home:products' type ' '%}"  class="ns">净化设备</a>
     </div>
 </div>
 <div class="category">
@@ -26,9 +26,9 @@
 </div>
 <div class="wrapper">
     <div class="catelist cf">
-        <a href="{% url 'home:products' 0 %}" class="home {% if type == 0 %}active{% endif %}">全部</a>
+        <a href="{% url 'home:products' 0 ' '%}" class="home {% if type == 0 %}active{% endif %}">全部</a>
         {% for each_product_type in product_types %}
-            <a href="{% url 'home:products' each_product_type.id %}" class="{% if each_product_type.id == type %}active{% endif %}" title="{{each_product_type.title}}">{{each_product_type.title}}</a>
+            <a href="{% url 'home:products' each_product_type.id ' '%}" class="{% if each_product_type.id == type %}active{% endif %}" title="{{each_product_type.title}}">{{each_product_type.title}}</a>
         {% empty %}
         暂时没有分类...
         {% endfor %}

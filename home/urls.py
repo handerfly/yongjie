@@ -29,7 +29,7 @@ urlpatterns = [
 
     path('service', views.service, name='service'),
 
-    path('products/<int:type>', views.products, name='products'),
+    path('products/<int:type>/<sub_type>', views.products, name='products'),
     path('product_detail/<int:product_id>', views.product_detail, name='product_detail'),
 
     path('news/<int:type>', views.news, name='news'),

@@ -7,7 +7,7 @@
 
 <div class="tbanner">
     <div class="banner" style=""></div>
-    <img src="{% static 'images/banner.jpg' %}" alt="">
+    <img src="{% static 'images/banner.jpg' %}" alt="" width="100%">
 </div>
 <div class="mapnav">
     <div class="wrapper">
@@ -24,7 +24,7 @@
                 <div class="desc">
                     <h3 class="title"><a href="{% url 'home:news_detail' each_news.id%}" title="{{ each_news.title }}">{{ each_news.title|truncatechars:100  }}</a></h3>
                     <div class="info">
-                        {{ each_news.content|striptags|truncatechars:120  }}
+                        {{ each_news.content|striptags|truncatechars:120 }}
                     </div>
                     <p class="datetime">{{each_news.update_time|date:'Y-m-d'}}</p>
                 </div>

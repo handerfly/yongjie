@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.db.models import Q
 from .models import *
 from django.core.paginator import Paginator
 from django.conf import settings
@@ -86,13 +87,16 @@ def case_detail(request, case_id):
 	return render(request, 'home/case_detail.html', context)
 
 # 产品
-def products(request, type):
+def products(request, type, sub_type):
 	#  没有传
 	if type ==0:
 		all_products = Product.objects.all()
 	else:
 		type_obj = get_object_or_404(ProductType, id=type)
-		all_products = Product.objects.filter(type=type_obj)
+		if sub_type == ' ':
+			all_products = Product.objects.filter(type=type_obj)
+		else:
+			all_products = Product.objects.filter(type=type_obj, sub_type=sub_type)
 
 	# 所有分类
 	product_type_objs = ProductType.objects.all()
@@ -108,7 +112,10 @@ def product_detail(request, product_id):
 	product_obj = get_object_or_404(Product, id=product_id)
 	# get the images
 	images = ProductImgs.objects.filter(product=product_obj)
-	# get all product types
+	# 当前产品分类
+	product_type = product_obj.type
+	# 获取二级菜单
+	product_sub_type_objs = Product.objects.filter(~Q(sub_type=''),type=product_type).values_list("sub_type",flat=True).distinct()
 	product_type_objs = ProductType.objects.all()
 
 	type_id = product_obj.type.id
@@ -118,6 +125,7 @@ def product_detail(request, product_id):
 	context['product_types'] = product_type_objs
 	context['images'] = images
 	context['type'] = type_id
+	context['sub_type'] = product_sub_type_objs
 	return render(request, 'home/product_detail.html', context)
 
 # 解决方案

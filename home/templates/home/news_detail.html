@@ -7,7 +7,7 @@
 
 <div class="tbanner">
     <div class="banner" style=""></div>
-    <img src="{% static 'images/banner.jpg' %}" alt="">
+    <img src="{% static 'images/banner.jpg' %}" alt="" width="100%">
 </div>
 <div class="mapnav">
     <div class="wrapper">
@@ -36,18 +36,14 @@
                     没有了
                     {% endif %}
                 </li>
-                <li>下一篇{{current_time}}：
+                <li>下一篇：
                     {% if next_news %}
                         <a href="{% url 'home:news_detail' next_news.pk%}">{{ next_news.title|truncatechars:23 }}</a>
                     {% else %}
                     没有了
                     {% endif %}
                 </li>
-                {% for each_n in next %}
-                <li>{{each_n.title}}</li>
-                {%empty%}
-                <li>no pre news...</li>
-                {% endfor %}
+
             </ul>
         </div>
     </div>
