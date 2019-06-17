@@ -58,12 +58,12 @@
                 <li class=""><a class="psa {% if request.path == url_lab %}active{% endif %}" href="{% url 'home:lab'%}" title='净化设备' >实验室系统</a></li>
                 <li class=""><a class="psa {% if request.get_full_path|slice:'10' == '/home/case' %}active{% endif %}" href="{% url 'home:cases' 0%}" title='成功案例' >成功案例</a></li>
                 <li class="">
-                    <a class="psa {% if request.get_full_path|slice:'13' == '/home/product' %}active{% endif %}" href="{% url 'home:products' 0 ' '%}" title='产品中心' >产品中心</a>
+                    <a class="psa {% if request.get_full_path|slice:'13' == '/home/product' %}active{% endif %}" href="{% url 'home:products' 0 'all' 1%}" title='产品中心' >产品中心</a>
                     <div class="subnav">
                             <div class="wrapper">
                                 <ul class="sub-menu cf">
-                                    <li><a href="{% url 'home:products' 1 ' ' %}" title='净化系统设备' class="" >● 净化系统设备</a></li>
-                                    <li><a href="{% url 'home:products' 2 ' ' %}" title='实验室系统设备' class="" >● 实验室系统设备</a></li>
+                                    <li><a href="{% url 'home:products' 0 'all' 1%}" title='净化系统设备' class="" >● 净化系统设备</a></li>
+                                    <li><a href="{% url 'home:products' 0 'all' 2%}" title='实验室系统设备' class="" >● 实验室系统设备</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -135,10 +135,10 @@
                 </ul>
             </li>
             <li class="c4">
-                <a class="psa" href="{% url 'home:products' 0 ' '%}" title='净化设备' >净化设备</a>
+                <a class="psa" href="{% url 'home:products' 0 'all' 0%}" title='净化设备' >净化设备</a>
                 <ul class="sub">
-                    <li><a href="{% url 'home:products' 0 ' '%}" title='空调设备' >空调设备</a></li>
-                    <li><a href="{% url 'home:products' 0 ' '%}" >更多设备</a></li>
+                    <li><a href="{% url 'home:products' 0 'all' 0%}" title='空调设备' >空调设备</a></li>
+                    <li><a href="{% url 'home:products' 0 'all' 0%}" >更多设备</a></li>
                 </ul>
             </li>
             <li class="c5">

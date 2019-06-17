@@ -2,77 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e02470b8-b747-4c40-bdb9-2a688228f0da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0002_auto_20190523_1040.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0003_auto_20190523_1053.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0004_auto_20190523_1200.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0005_remove_cases_products.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0006_auto_20190523_1222.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0007_honer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0008_auto_20190523_2113.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0009_auto_20190523_2114.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0010_auto_20190523_2123.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0011_news_cover.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0012_product_cover.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0013_cases_cover.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0014_price.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0015_auto_20190524_1744.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0016_banner.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0017_delete_banner.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0018_banner.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0019_auto_20190524_1924.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0020_auto_20190529_1056.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0021_auto_20190603_2255.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0022_auto_20190603_2305.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0023_auto_20190603_2309.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0024_product_sub_type.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/honer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/honer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/solution_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/solution_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/product_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/cases_img/big_58f0477f89544.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/cases_img/big_5a93718998968.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/cases_img/big_5a93718a3d090.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/cases_img/big_5a93718abaeb9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/cases_img/big_5a937246ec82e.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/cases_img/big_5a93724ca7d8c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/cases_img/big_5a93724db71b0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/cases_img/big_5a93724db71b0_SSx8Okk.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/honer_img/big_5b6252cc501bd.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/honer_img/big_5b6252d70f424.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_img/big_58587f00b34a7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_img/big_58587fc4c65d4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_img/big_5858806900000.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_img/big_585880cf2625a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_img/big_5a93760b4c4b4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_img/big_5a93760fe8b25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_img/big_5a93761022551.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_img/big_5a9376107a120.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_img/图片3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_img/图片4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_img/图片5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/solution_cover/solution1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/solution_cover/solution2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/solution_cover/solution3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/solution_cover/solution4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/solution_cover/solution5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/solution_cover/solution6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/solution_cover/solution7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/upload/2019/05/23/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/upload/2019/05/23/5c11dfad22551.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/upload/2019/05/23/big_5a920e4c501bd.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/index_cn.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index_cn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_collected/css/index_cn.css" beforeDir="false" afterPath="$PROJECT_DIR$/static_collected/css/index_cn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mobilebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mobilebase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yongjie/settingsxxx/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yongjie/settingsxxx/default.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yongjie/settingsxxx/develop.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yongjie/settingsxxx/product.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yongjie/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yongjie/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,10 +19,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="108" column="47" lean-forward="true" selection-start-line="108" selection-start-column="47" selection-end-line="108" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="106" column="29" selection-start-line="106" selection-start-column="29" selection-end-line="106" selection-end-column="29" />
+            <state relative-caret-position="408">
+              <caret line="122" column="70" selection-start-line="122" selection-start-column="70" selection-end-line="122" selection-end-column="70" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -95,31 +43,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yongjie/settings.py">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="96" column="29" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
+            <state relative-caret-position="480">
+              <caret line="65" column="73" selection-start-line="65" selection-start-column="73" selection-end-line="65" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/home/views.py">
+        <entry file="file://$PROJECT_DIR$/home/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="101" column="60" selection-start-line="101" selection-start-column="60" selection-end-line="101" selection-end-column="60" />
+            <state relative-caret-position="216">
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
               <folding>
-                <element signature="e#0#54#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/home/templates/home/solution_detail.html">
+        <entry file="file://$PROJECT_DIR$/home/templates/home/product_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="336">
+              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="31" column="43" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="43" />
+              <folding>
+                <element signature="e#631#663#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,12 +118,12 @@
       <find>default</find>
       <find>content</find>
       <find>type</find>
-      <find>product</find>
       <find>produc</find>
       <find>url</find>
       <find>tags</find>
       <find>高效</find>
       <find>about</find>
+      <find>product</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -202,37 +162,38 @@
         <option value="$PROJECT_DIR$/static/css/index_cn.css" />
         <option value="$PROJECT_DIR$/home/templates/home/index.html" />
         <option value="$PROJECT_DIR$/static/css/pic_cn.css" />
-        <option value="$PROJECT_DIR$/home/admin.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/home/templates/home/about.html" />
         <option value="$PROJECT_DIR$/home/templates/home/case_detail.html" />
         <option value="$PROJECT_DIR$/home/templates/home/cases.html" />
         <option value="$PROJECT_DIR$/home/templates/home/honer.html" />
         <option value="$PROJECT_DIR$/home/templates/home/lab.html" />
-        <option value="$PROJECT_DIR$/home/templates/home/products.html" />
         <option value="$PROJECT_DIR$/home/templates/home/service.html" />
         <option value="$PROJECT_DIR$/home/templates/home/solution.html" />
         <option value="$PROJECT_DIR$/home/templates/home/news_detail.html" />
         <option value="$PROJECT_DIR$/home/templates/home/news.html" />
-        <option value="$PROJECT_DIR$/home/templates/home/product_detail.html" />
         <option value="$PROJECT_DIR$/templates/404.html" />
         <option value="$PROJECT_DIR$/yongjie/urls.py" />
         <option value="$PROJECT_DIR$/yongjie/settings/default.py" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/yongjie/settings/develop.py" />
         <option value="$PROJECT_DIR$/yongjie/settings/product.py" />
-        <option value="$PROJECT_DIR$/home/urls.py" />
-        <option value="$PROJECT_DIR$/home/models.py" />
         <option value="$PROJECT_DIR$/yongjie/settings.py" />
-        <option value="$PROJECT_DIR$/home/views.py" />
         <option value="$PROJECT_DIR$/home/templates/home/solution_detail.html" />
+        <option value="$PROJECT_DIR$/home/urls.py" />
+        <option value="$PROJECT_DIR$/home/admin.py" />
+        <option value="$PROJECT_DIR$/home/views.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/home/templates/home/products.html" />
+        <option value="$PROJECT_DIR$/home/models.py" />
+        <option value="$PROJECT_DIR$/home/templates/home/product_detail.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="589" />
-    <option name="width" value="1308" />
-    <option name="height" value="1047" />
+    <option name="x" value="-26" />
+    <option name="y" value="66" />
+    <option name="width" value="1940" />
+    <option name="height" value="843" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -263,6 +224,11 @@
               <item name="home" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yongjie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yongjie" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -307,10 +273,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="589" y="0" width="1308" height="1047" extended-state="0" />
+    <frame x="-26" y="66" width="1940" height="843" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19291338" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12881178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -537,23 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="58" column="67" selection-start-line="58" selection-start-column="67" selection-end-line="58" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/home/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -601,13 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/templates/home/products.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/home/service.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -626,13 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="26" column="72" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home/templates/home/product_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="40" column="138" selection-start-line="40" selection-start-column="138" selection-end-line="40" selection-end-column="138" />
         </state>
       </provider>
     </entry>
@@ -680,23 +615,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/urls.py">
+    <entry file="file://$PROJECT_DIR$/home/templates/home/solution_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#631#663#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="106" column="29" selection-start-line="106" selection-start-column="29" selection-end-line="106" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="96">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -707,20 +629,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="65" column="73" selection-start-line="65" selection-start-column="73" selection-end-line="65" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="31" column="43" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="43" />
+          <folding>
+            <element signature="e#631#663#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/templates/home/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="28" column="69" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="122" column="70" selection-start-line="122" selection-start-column="70" selection-end-line="122" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="101" column="60" selection-start-line="101" selection-start-column="60" selection-end-line="101" selection-end-column="60" />
+        <state relative-caret-position="288">
+          <caret line="108" column="47" lean-forward="true" selection-start-line="108" selection-start-column="47" selection-end-line="108" selection-end-column="47" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/templates/home/solution_detail.html">
+    <entry file="file://$PROJECT_DIR$/home/templates/home/product_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        <state relative-caret-position="336">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
         </state>
       </provider>
     </entry>

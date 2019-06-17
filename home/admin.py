@@ -4,7 +4,7 @@ from .models import *
 
 @admin.register(About)
 class AboutAdmin(admin.ModelAdmin):
-    list_display = ('id','title', 'content', 'update_time')
+    list_display = ('title', 'content', 'update_time')
 
 @admin.register(Honer)
 class AboutAdmin(admin.ModelAdmin):
@@ -23,9 +23,13 @@ class NewsTypeAdmin(admin.ModelAdmin):
 class NewsAdmin(admin.ModelAdmin):
     list_display = ('title', 'type', 'author','content', 'viewed','update_time')
 
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('id',"title",)
+
 @admin.register(ProductType)
 class ProductTypeAdmin(admin.ModelAdmin):
-    list_display = ('title', 'order','update_time')
+    list_display = ('category','title', 'order','update_time')
 
 class ProductImgsInline(admin.TabularInline):
     model = ProductImgs
@@ -34,7 +38,7 @@ class ProductImgsInline(admin.TabularInline):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     inlines = [ProductImgsInline]
-    list_display = ('title', 'type','sub_type', 'detail', 'update_time')
+    list_display = ('title', 'category','type','sub_type', 'detail', 'update_time')
 
 @admin.register(ProductImgs)
 class ProductImgsAdmin(admin.ModelAdmin):

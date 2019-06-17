@@ -12,23 +12,21 @@
 <div class="mapnav">
     <div class="wrapper">
         <a href="{% url 'home:home'%}">首页</a> <em>&gt;</em>
-        <a href="{% url 'home:products' type ' '%}"  class="ns">净化设备</a>
+        <a href="{% url 'home:products' type 'all' category_id%}"  class="ns">{{category_title}}</a>
     </div>
 </div>
-<div class="category">
-    <div class="wrapper">
-        <div class="con">
-            <h2>净化设备展示</h2>
-            <p>永洁净化精挑细选优秀的净化设备合作伙伴<br/>
-                为所有客户提供质量过硬、价格公道、服务优质的净化产品<br/>
-                保障所有工程项目能够准时安装使用，并且在日后的维护中，排除设备故障所导致的损失</p>        </div>
-    </div>
-</div>
+<!--<div class="category">-->
+<!--    <div class="wrapper">-->
+<!--        <div class="con">-->
+<!--            <h2>{{category_title}}</h2>-->
+<!--            <p>顺尚净化精挑细选优秀的净化设备合作伙伴</p>        </div>-->
+<!--    </div>-->
+<!--</div>-->
 <div class="wrapper">
     <div class="catelist cf">
-        <a href="{% url 'home:products' 0 ' '%}" class="home {% if type == 0 %}active{% endif %}">全部</a>
+        <a href="{% url 'home:products' 0 'all' category_id%}" class="home {% if type == 0 %}active{% endif %}">全部</a>
         {% for each_product_type in product_types %}
-            <a href="{% url 'home:products' each_product_type.id ' '%}" class="{% if each_product_type.id == type %}active{% endif %}" title="{{each_product_type.title}}">{{each_product_type.title}}</a>
+            <a href="{% url 'home:products' each_product_type.id 'all' category_id%}" class="{% if each_product_type.id == type %}active{% endif %}" title="{{each_product_type.title}}">{{each_product_type.title}}</a>
         {% empty %}
         暂时没有分类...
         {% endfor %}
@@ -37,7 +35,7 @@
         <ul class="cf list">
             {% for each_product in page_of_obj %}
             <li>
-                <a href="{% url 'home:product_detail' each_product.id%}" class="pic"><img src="/media/{{each_product.cover}}" alt="{{each_product.title}}"/></a>
+                <a href="{% url 'home:product_detail' each_product.id %}" class="pic"><img src="/media/{{each_product.cover}}" alt="{{each_product.title}}"/></a>
                 <h3 class="tt"><a href="{% url 'home:product_detail' each_product.id%}" title="{{each_product.title}}">{{each_product.title}}</a></h3>
             </li>
             {% empty %}

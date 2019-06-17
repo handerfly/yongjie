@@ -86,24 +86,33 @@ def case_detail(request, case_id):
 	context['images'] = images
 	return render(request, 'home/case_detail.html', context)
 
-# 产品
-def products(request, type, sub_type):
-	#  没有传
-	if type ==0:
-		all_products = Product.objects.all()
-	else:
-		type_obj = get_object_or_404(ProductType, id=type)
-		if sub_type == ' ':
-			all_products = Product.objects.filter(type=type_obj)
-		else:
-			all_products = Product.objects.filter(type=type_obj, sub_type=sub_type)
+# 产品   type一级菜单，sub_type二级分类，category大类
+def products(request, type, sub_type, category):
 
-	# 所有分类
-	product_type_objs = ProductType.objects.all().order_by('order')
+	# 大类对象
+	category_obj = get_object_or_404(Category, id=category)
+	# 一级菜单
+	product_type_objs = ProductType.objects.filter(category=category_obj).order_by('order')
+
+	#  没有一级菜单，显示所有大类下的产品
+	if type ==0:
+		# 大类下的子类
+		all_products = Product.objects.filter(category=category_obj)
+	else:
+		# 一级菜单
+		type_obj = get_object_or_404(ProductType, id=type)
+		# 二级菜单下的所有产品
+		if sub_type == 'all':
+			all_products = Product.objects.filter(type=type_obj,category=category_obj)
+		else:
+			# 大类下的一级菜单下的二级菜单下的所有产品
+			all_products = Product.objects.filter(type=type_obj, sub_type=sub_type,category=category_obj)
 
 	context = get_list_common_data(request, all_products)
 	context['product_types'] = product_type_objs
 	context['type'] = type
+	context['category_title'] = category_obj.title
+	context['category_id'] = category_obj.id
 	return render(request, 'home/products.html', context)
 
 # 产品详情

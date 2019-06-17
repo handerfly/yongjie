@@ -12,7 +12,7 @@
 <div class="mapnav">
     <div class="wrapper">
         <a href="/">首页</a> <em>&gt;</em>
-        <a href="{% url 'home:products' product.type.id product.sub_type %}" >{{product.type.title}}</a> <em>&gt;</em>
+        <a href="{% url 'home:products' product.type.id product.sub_type product.category.id%}" >{{product.type.title}}</a> <em>&gt;</em>
         {{product.title}}
     </div>
 </div>
@@ -22,8 +22,16 @@
             <ul>
 
                 {% for each_sub_type in sub_type %}
-                <li><a href="{% url 'home:products' type each_sub_type %}" class="{% if product.sub_type == each_sub_type %}active{% endif %}"
-                       title="净化通风">{{each_sub_type}}</a></li>
+                    {% if not each_sub_type == 'None' %}
+                        <li>
+                            <a href="{% url 'home:products' type each_sub_type product.category.id %}" class="{% if product.sub_type == each_sub_type %}active{% endif %}"
+                               title="净化通风">{{each_sub_type}}</a>
+                        </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'home:products' product.type.id product.sub_type product.category.id%}" >{{product.type.title}}</a>
+                    <li>
+                    {% endif %}
                 {%empty%}
                     暂时没有分类...
                 {%endfor%}

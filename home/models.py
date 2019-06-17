@@ -93,8 +93,17 @@ class News(models.Model):
     class Meta:
         verbose_name_plural = "   新闻中心"
 
+class Category(models.Model):
+    title = models.CharField("产品大类",max_length=100)
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = "           产品大类"
+
 # 产品分类
 class ProductType(models.Model):
+    category = models.ForeignKey(Category,on_delete=models.CASCADE, verbose_name="产品大类")
     title = models.CharField("产品分类", max_length=20)
     order = models.SmallIntegerField("排序", default='0',help_text="数值越小排序越前")
     create_time = models.DateTimeField("创建时间", auto_now_add=True)
@@ -109,8 +118,9 @@ class ProductType(models.Model):
 # 产品
 class Product(models.Model):
     title = models.CharField("产品标题", max_length=100)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name="产品大类")
     type = models.ForeignKey(ProductType, on_delete=models.CASCADE, verbose_name="产品分类")
-    sub_type = models.CharField("产品二级分类", max_length=100,default='')
+    sub_type = models.CharField("产品二级分类", max_length=100,default='None',null=True,blank=True)
     cover = models.ImageField("封面图片", upload_to='news_cover/', help_text="建议图片大小：360*258像素",
                               default="products_cover/products_cover.jpg")
     detail = RichTextUploadingField("产品详情",config_name='my_config')
