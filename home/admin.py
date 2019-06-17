@@ -25,7 +25,7 @@ class NewsAdmin(admin.ModelAdmin):
 
 @admin.register(ProductType)
 class ProductTypeAdmin(admin.ModelAdmin):
-    list_display = ('title', 'update_time')
+    list_display = ('title', 'order','update_time')
 
 class ProductImgsInline(admin.TabularInline):
     model = ProductImgs

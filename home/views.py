@@ -99,7 +99,7 @@ def products(request, type, sub_type):
 			all_products = Product.objects.filter(type=type_obj, sub_type=sub_type)
 
 	# 所有分类
-	product_type_objs = ProductType.objects.all()
+	product_type_objs = ProductType.objects.all().order_by('order')
 
 	context = get_list_common_data(request, all_products)
 	context['product_types'] = product_type_objs

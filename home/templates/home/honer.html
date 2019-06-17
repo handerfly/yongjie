@@ -13,7 +13,7 @@
 <div class="mapnav">
     <div class="wrapper">
         <a href="{% url 'home:home'%}">首页</a> <em>&gt;</em>
-        荣誉资质
+        荣誉资质99
     </div>
 </div>
 <div id="main_content">
@@ -22,8 +22,8 @@
 
         {% for each_honer in honer %}
             <div class="li ">
-                <a rel="group" parm="bigpic" href="/media/{{ each_honer.images }}" title="{{ each_honer.title }}" class="pic" target="_blank">
-                    <img src="/media/{{ each_honer.images }}" alt="{{ each_honer.title }}" title="{{ each_honer.title }}"/></a>
+                <a rel="group" parm="bigpic" href="/media/{{ each_honer.images }}" title="{{ each_honer.title }}" class="pic" target="_blank" style="text-align:center;border:0px">
+                    <img src="/media/{{ each_honer.images }}" alt="{{ each_honer.title }}" title="{{ each_honer.title }}" style="width: auto;height=auto;max-width=100%;max-height=100%;"/></a>
                 <span class="tt">{{ each_honer.title }}</span>
             </div>
         {%empty%}

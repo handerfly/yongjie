@@ -96,7 +96,7 @@ class News(models.Model):
 # 产品分类
 class ProductType(models.Model):
     title = models.CharField("产品分类", max_length=20)
-
+    order = models.SmallIntegerField("排序", default='0',help_text="数值越小排序越前")
     create_time = models.DateTimeField("创建时间", auto_now_add=True)
     update_time = models.DateTimeField("更新时间", auto_now=True)
 

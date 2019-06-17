@@ -1,0 +1,68 @@
+﻿/*首页*/
+.mtitle{}
+.fd{text-align:center}
+.more{padding:0 20px;height:30px;line-height:30px;font-size:14px;margin:20px auto 0;border-width:2px;border-radius:8px;background:none}
+.more em{color:#ff7e00}
+.more:hover{background-color:#025299;color:#fff;}
+.more:hover em{color:#fff}
+
+/*应用*/
+.solution{margin:0px;}
+.solution .mtitle h2 span{color:#0071bf}
+.solution li{float:left;width:100%;box-sizing:border-box;padding:5px;margin:0 0px 10px 0;background:#0071bf;}
+.solution .pic{float:left;width:50%;display:block;overflow:hidden;}
+.solution .pic img{width:100%;height:auto;}
+.solution .end{margin-right:0;}
+.solution .desc{float:left;width:50%;text-align:center;color:#fff;}
+.solution .desc i{display:block;width:60px;height:67px;margin:5px auto;background-size:60px auto;}
+.solution .desc h2{font-size:14px;}
+.solution .desc .bicon-s1{background-position:0 0}
+.solution .desc .bicon-s2{background-position:0 -67px}
+.solution .desc .bicon-s3{background-position:0 -134px;}
+.solution .desc .bicon-s4{background-position:0 -203px;}
+
+/*案例*/
+.case_list{padding-bottom:38px;background:#f6f6f6}
+.case_list .mtitle h2 span{background:#f6f6f6}
+
+.case_list ul{padding:5px;}
+.case_list li{float:left;width:50%;padding:5px;box-sizing:border-box;}
+.case_list li .pic{display:block;border:1px solid #cecece;padding:1px;overflow:hidden}
+.case_list li .pic img{width:100%;height:auto}
+.case_list li .tt{display:block;font-weight:normal;font-size:12px;line-height:30px;height:30px;overflow:hidden;text-align:center;}
+.case_list .end{margin-right:0;}
+.case_list li:hover .pic{border-color:#016aaf;background:#016aaf}
+.case_list li:hover .tit{color:#016aaf}
+
+/*公司荣誉*/
+.certification{padding:20px 0;}
+.certification .hd{color:#555;font-size:22px;line-height:50px;text-align:center;margin-bottom:10px;}
+.certification .fd{text-align:center}
+.certification .fd .more{margin-top:20px;}
+.certification .bd{height:150px;overflow-y:auto}
+.certification ul{white-space: nowrap}
+.certification li{display:inline-block;width:150px;margin:0px 0px 0px 10px;box-sizing:border-box;}
+.certification li .pic{display:block;border:1px solid #cecece;padding:1px;}
+.certification li .pic img{width:100%;height:auto;}
+.certification li .pic:hover{border-color:#a5d134}
+.certification li h3{line-height:30px;height:30px;overflow:hidden;font-size:14px;text-align:center;}
+.certification .end{margin-right:0;}
+
+.certification li:hover .pic{border-color:#016aaf;background:#016aaf}
+.certification li:hover a{color:#016aaf}
+
+.news-panel{padding-top:10px;}
+.news-panel .hd{border-bottom:1px solid #ddd;height:40px;margin-bottom:0px;}
+.news-panel .hd a{position:relative;width:33.33%;float:left;height:40px;line-height:40px;text-align:center;font-size:16px;color:#555;}
+.news-panel .hd a:after{position:absolute;left:0;top:14px;content:'';width:1px;height:12px;background:#ddd}
+.news-panel .hd a:first-child:after{display:none;}
+.news-panel .hd a.active{color:#0071bf;}
+.news{padding:15px;}
+.news ul{display:none;}
+.news li{height:36px;line-height:36px;position:relative;border-bottom:1px dotted #d5d5d5;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.news li em{float:left;color:#016aaf;margin-right:15px;}
+.news li a{color:#777;}
+.news li a:hover{color:#016aaf;}
+
+.news-panel .fd{clear:both;text-align:center;margin-top:10px;}
+.news-panel .fd .more{margin:0px 0 20px;}
