@@ -134,6 +134,14 @@ class Product(models.Model):
     class Meta:
         verbose_name_plural = "         产品"
 
+    def show_detail(self):
+        if len(self.detail)>100:
+            return '{}...'.format(self.detail[0:100])
+        else:
+            return self.detail
+    show_detail.allow_tags = True
+
+
 # 产品图集
 class ProductImgs(models.Model):
     images = models.ImageField("图片地址", upload_to='product_img/')
