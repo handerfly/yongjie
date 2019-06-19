@@ -35,8 +35,8 @@
         <ul class="cf list">
             {% for each_case in page_of_obj %}
             <li>
-                <a href="{% url 'home:case_detail' each_case.id%}" class="pic">
-                    <img src="/media/{{each_case.cover}}" alt="{{each_case.title}}"  max-width="100%" width="100%"  height="200px" /></a>
+                <a href="{% url 'home:case_detail' each_case.id%}" class="pic" style="text-align:center">
+                    <img src="/media/{{each_case.cover}}" alt="{{each_case.title}}"  style="vertical-align: middle;max-height:100%;height:200px" /></a>
                 <h3 class="tt"><a href="{% url 'home:case_detail' each_case.id%}" title="{{each_case.title}}">{{each_case.title}}</a></h3>
             </li>
             {% empty %}

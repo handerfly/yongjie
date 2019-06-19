@@ -3,7 +3,7 @@
 .prod_list{padding:0px 0 40px}
 .prod_list .list li{float:left;width:200px;margin:0 50px 32px 0}
 .prod_list .list li .pic{display:block;border:1px solid #cecece;width:194px;height:194px;overflow:hidden;padding:2px;}
-.prod_list .list li .pic img{width:100%;height:100%}
+.prod_list .list li .pic img{height:100%}
 .prod_list .list .end{margin-right:0}
 .prod_list .list h3{line-height:38px;height:38px;overflow:hidden;font-size:16px;text-align:center;}
 .prod_list .list h3 a{color:#555}

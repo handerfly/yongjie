@@ -35,7 +35,8 @@
         <ul class="cf list">
             {% for each_product in page_of_obj %}
             <li>
-                <a href="{% url 'home:product_detail' each_product.id %}" class="pic"><img src="/media/{{each_product.cover}}" alt="{{each_product.title}}"/></a>
+                <a href="{% url 'home:product_detail' each_product.id %}" class="pic" style="text-align:center">
+                    <img src="/media/{{each_product.cover}}" alt="{{each_product.title}}" style="vertical-align: middle;max-height:100%;height:200px"/></a>
                 <h3 class="tt"><a href="{% url 'home:product_detail' each_product.id%}" title="{{each_product.title}}">{{each_product.title}}</a></h3>
             </li>
             {% empty %}

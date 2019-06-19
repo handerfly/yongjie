@@ -22,8 +22,8 @@
             {% for each_case in relate_cases %}
                 {% if not each_case.id == case.id %}
                     <li class="">
-                        <a href="{% url 'home:case_detail' each_case.id%}" title="{{each_case.title}}" class="pic" target="_blank">
-                        <img src="/media/{{each_case.cover}}" alt="{{each_case.title}}" title="{{each_case.title}}"/></a>
+                        <a href="{% url 'home:case_detail' each_case.id%}" title="{{each_case.title}}" class="pic" target="_blank"style="text-align:center">
+                        <img src="/media/{{each_case.cover}}" alt="{{each_case.title}}" title="{{each_case.title}}"  style="vertical-align: middle;max-height:100%;height:200px"/></a>
                     <a href="{% url 'home:case_detail' each_case.id%}" class="tt" target="_blank">{{each_case.title}}</a>
                     </li>
                 {% endif %}
@@ -41,7 +41,11 @@
                     <div class="bfocus">
                         <ul>
                              {% for each_image in images %}
-                            <li><a href="javascript:;"><img src="/media/{{each_image.images}}" alt="{{case.title}}" style="vertical-align: middle;" max-width="100%" width="100%"  height="388px" /></a></li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="/media/{{each_image.images}}" alt="{{case.title}}" style="vertical-align: middle;max-height:100%;height:445px"  />
+                                </a>
+                            </li>
                             {% empty %}
                             暂时没有图片...
                             {%endfor%}
