@@ -21,7 +21,7 @@ class NewsTypeAdmin(admin.ModelAdmin):
 
 @admin.register(News)
 class NewsAdmin(admin.ModelAdmin):
-    list_display = ('title', 'type', 'author','content', 'viewed','update_time')
+    list_display = ('title', 'type', 'author','show_content', 'viewed','update_time')
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -46,11 +46,11 @@ class ProductImgsAdmin(admin.ModelAdmin):
 
 @admin.register(SolutionType)
 class SolutionTypeAdmin(admin.ModelAdmin):
-    list_display = ('title', 'update_time')
+    list_display = ('title', 'order','update_time')
 
 @admin.register(Solution)
 class SolutionAdmin(admin.ModelAdmin):
-    list_display = ('title', 'type', 'cover','detail', 'update_time')
+    list_display = ('title', 'type', 'cover','show_detail', 'update_time')
 
 class CasesImgsInline(admin.TabularInline):
     model = CasesImgs

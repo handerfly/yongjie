@@ -93,6 +93,15 @@ class News(models.Model):
     class Meta:
         verbose_name_plural = "   新闻中心"
 
+    def show_content(self):
+        if len(self.content)>100:
+            return '{}...'.format(self.content[0:100])
+        else:
+            return self.content
+    show_content.allow_tags = True
+
+
+
 class Category(models.Model):
     title = models.CharField("产品大类",max_length=100)
     def __str__(self):
@@ -159,7 +168,7 @@ class ProductImgs(models.Model):
 # 解决方案分类
 class SolutionType(models.Model):
     title = models.CharField("解决方案分类", max_length=30)
-
+    order = models.SmallIntegerField("排序", default='0',help_text="数值越小排序越前")
     create_time = models.DateTimeField("创建时间", auto_now_add=True)
     update_time = models.DateTimeField("更新时间", auto_now=True)
 
@@ -184,6 +193,13 @@ class Solution(models.Model):
 
     class Meta:
         verbose_name_plural = "      净化方案"
+
+    def show_detail(self):
+        if len(self.detail)>100:
+            return '{}...'.format(self.detail[0:100])
+        else:
+            return self.detail
+    show_detail.allow_tags = True
 
 # 工程案例
 class Cases(models.Model):

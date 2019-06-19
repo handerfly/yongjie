@@ -151,7 +151,7 @@ textarea {resize:none;min-height:60px;padding:15px 20px;}
 
 .catelist{margin:30px 0 20px;}
 .catelist .home{width:104px;}
-.catelist a{float:left;width:164px;height:40px;line-height:40px;text-align:center;background:#f0f0f0;margin:0 20px 10px 0;font-size:16px;color:#555}
+.catelist a{float:left;width:auto;height:40px;padding-left:15px;padding-right:15px;line-height:40px;text-align:center;background:#f0f0f0;margin:0 20px 10px 0;font-size:16px;color:#555}
 .catelist a:hover,.catelist a.active{background:#0071bf;color:#fff;}
 
 .mtitle{text-align:center;padding:32px 0;}

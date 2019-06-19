@@ -63,7 +63,7 @@ def cases(request, type):
 		all_cases = Cases.objects.filter(solution=type_obj)
 
 	# 所有分类
-	cases_type_objs = SolutionType.objects.all()
+	cases_type_objs = SolutionType.objects.all().order_by('order')
 
 	context = get_list_common_data(request, all_cases)
 	context['cases_types'] = cases_type_objs
