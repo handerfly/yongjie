@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e02470b8-b747-4c40-bdb9-2a688228f0da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/home/templates/home/case_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/case_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/cases.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/cases.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/product_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/pic_cn.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/pic_cn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/product_cn.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/product_cn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_collected/css/pic_cn.css" beforeDir="false" afterPath="$PROJECT_DIR$/static_collected/css/pic_cn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_collected/css/product_cn.css" beforeDir="false" afterPath="$PROJECT_DIR$/static_collected/css/product_cn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yongjie/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/yongjie/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yongjie/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="191" column="25" selection-start-line="191" selection-start-column="25" selection-end-line="191" selection-end-column="25" />
+            <state relative-caret-position="224">
+              <caret line="191" column="24" selection-start-line="191" selection-start-column="24" selection-end-line="191" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -68,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home/templates/home/product_detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
@@ -175,7 +168,6 @@
         <option value="$PROJECT_DIR$/home/views.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/home/templates/home/index.html" />
-        <option value="$PROJECT_DIR$/yongjie/settings.py" />
         <option value="$PROJECT_DIR$/home/templates/home/case_detail.html" />
         <option value="$PROJECT_DIR$/static_collected/css/pic_cn.css" />
         <option value="$PROJECT_DIR$/static/css/pic_cn.css" />
@@ -184,6 +176,7 @@
         <option value="$PROJECT_DIR$/home/templates/home/cases.html" />
         <option value="$PROJECT_DIR$/home/templates/home/products.html" />
         <option value="$PROJECT_DIR$/home/templates/home/product_detail.html" />
+        <option value="$PROJECT_DIR$/yongjie/settings.py" />
       </list>
     </option>
   </component>
@@ -629,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yongjie/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="191" column="25" selection-start-line="191" selection-start-column="25" selection-end-line="191" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/pic_cn.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -706,6 +692,13 @@
             <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yongjie/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="191" column="24" selection-start-line="191" selection-start-column="24" selection-end-line="191" selection-end-column="24" />
         </state>
       </provider>
     </entry>
