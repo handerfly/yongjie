@@ -41,7 +41,7 @@
                     <div class="bfocus">
                         <ul>
                              {% for each_image in images %}
-                            <li><a href="javascript:;"><img src="/media/{{each_image.images}}" alt="{{case.title}}" max-width="100%" width="100%"  height="388px" /></a></li>
+                            <li><a href="javascript:;"><img src="/media/{{each_image.images}}" alt="{{case.title}}" style="vertical-align: middle;" max-width="100%" width="100%"  height="388px" /></a></li>
                             {% empty %}
                             暂时没有图片...
                             {%endfor%}
