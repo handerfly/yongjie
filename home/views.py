@@ -6,6 +6,7 @@ from django.conf import settings
 from yongjie.form import PriceForm
 from django.http import HttpResponseRedirect,HttpResponse
 import json
+from django.core.mail import send_mail
 
 def get_list_common_data(request, all_list):
     paginator = Paginator(all_list, settings.EACH_PAGE_BLOGS_NUMBER)
@@ -280,6 +281,16 @@ def price(request):
 			mobile=mobile,
 		)
 		if price_obj:
+			# 发送邮件
+			if sex == '1':
+				sex='男'
+			else:
+				sex='女'
+
+			msg = '新的报价信息：</br>报价人姓名：%s </br>性别:%s </br>手机号:%s </br>车间面积:%s m² <a href "http://47.94.235.194/admin/home/price/" >查看详细详情</a>'%(name,sex,mobile,area)
+			#msg = "hellotestofemail "
+			send_mail('提交成功', '有人通过网站提交了报价，请注意查收.', '2860889124@qq.com',
+					  ['573780734@qq.com'], html_message=msg)
 			return HttpResponse(json.dumps({'status':'success'}))
 	else:
 		return HttpResponse(json.dumps({'status':'fail','msg':"请您正确填写表单"}))
