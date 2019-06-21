@@ -130,7 +130,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name="产品大类")
     type = models.ForeignKey(ProductType, on_delete=models.CASCADE, verbose_name="产品分类")
     sub_type = models.CharField("产品二级分类", max_length=100,default='None',null=True,blank=True)
-    cover = models.ImageField("封面图片", upload_to='news_cover/', help_text="建议图片大小：360*258像素",
+    cover = models.ImageField("封面图片", upload_to='products_cover/', help_text="建议图片大小：360*258像素",
                               default="products_cover/products_cover.jpg")
     detail = RichTextUploadingField("产品详情",config_name='my_config')
 
