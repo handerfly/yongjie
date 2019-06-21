@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="catelist cf">
-    <ul>
+    <ul style="overflow-x:auto">
         <li class="{% if type == 0 %}active{% endif %}"><a href="{% url 'mobile:products' 0 %}">全部</a></li>
         {% for each_product_type in product_types %}
             <li class="{% if type == each_product_type.id %}active{% endif %}"><a href="{% url 'mobile:products' each_product_type.id %}" class="{% if each_product_type.id == type %}active{% endif %}" title="{{each_product_type.title}}">{{each_product_type.title}}</a></li>
