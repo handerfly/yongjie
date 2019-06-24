@@ -27,7 +27,7 @@ textarea {resize:none;min-height:60px;padding:15px 20px;}
 .btn-default{background-color:#efefef;color:#4b4b4b;text-decoration:none}
 .btn-gray{background-color:#bababa;color:#fff;text-decoration:none}
 .btn-gray:hover{background-color:#43bcc7;color:#fff;text-decoration:none}
-.btn-blue{background-color:#0071bf;color:#fff;text-decoration:none}
+.btn-blue{background-color:#0099cc;color:#fff;text-decoration:none}
 .btn-blue:hover{background-color:#015fa0;color:#fff;text-decoration:none}
 .btn-green{background-color:#a6d250;color:#fff;text-decoration:none}
 .btn-green:hover{background-color:#7da828;color:#fff;text-decoration:none}
@@ -36,7 +36,7 @@ textarea {resize:none;min-height:60px;padding:15px 20px;}
 .btn-gold{background-color:#e9d356;color:#fff;text-decoration:none}
 .btn-gold:hover{background-color:#d2bd43;color:#fff;text-decoration:none}
 
-.btn-bblue{background-color:#fff;border:1px solid #016aaf;color:#016aaf}
+.btn-bblue{background-color:#fff;border:1px solid #0099cc;color:#0099cc}
 .btn-borange{background-color:#fff;border:1px solid #ff860d;color:#ff860d}
 
 .btn-info,.btn-info:hover{background-color:#2aa9b0;color:#fff;text-decoration:none}
@@ -54,7 +54,7 @@ textarea {resize:none;min-height:60px;padding:15px 20px;}
 .tnav .lang{float:right;font-size:12px;}
 .tnav .lang i{float:left;background:url(../images/lang.png) no-repeat;width:20px;height:14px;margin:8px 5px 0 0;}
 .tnav .lang a{float:left;margin-left:12px;color:#777}
-.tnav .lang a.s{color:#0099cc}
+.tnav .lang a.s{color:#./js}
 .tnav .lang .en{background-position:0 -14px;}
 
 .header .top{height:124px;position:relative;z-index:1;}
@@ -62,7 +62,7 @@ textarea {resize:none;min-height:60px;padding:15px 20px;}
 .header .logo a{float:left;}
 .header .tel{position:absolute;right:0;top:42px;font-size:16px;height:50px;color:#333;line-height:20px;padding-left:60px;}
 .header .tel i{position:absolute;left:0;top:0;float:left;background-position:0 0;width:50px;height:50px;}
-.header .tel strong{font-size:30px;color:#0099cc;line-height:30px;font-weight:400;font-family:arial}
+.header .tel strong{font-size:30px;color:#./js;line-height:30px;font-weight:400;font-family:arial}
 
 .header .navBtn{display:none;position:absolute;top:50%;right:34px;width:44px;height:37px;margin-top:-19px;cursor:pointer;z-index:1;}
 .header .navBtn{transition-duration:.5s;-ms-transition-duration:.5s;-moz-transition-duration:.5s;-webkit-transition-duration:.5s; }
@@ -151,14 +151,14 @@ textarea {resize:none;min-height:60px;padding:15px 20px;}
 
 .catelist{margin:30px 0 20px;}
 .catelist .home{width:104px;}
-.catelist a{float:left;width:auto;height:40px;padding-left:15px;padding-right:15px;line-height:40px;text-align:center;background:#f0f0f0;margin:0 20px 10px 0;font-size:16px;color:#555}
-.catelist a:hover,.catelist a.active{background:#0071bf;color:#fff;}
+.catelist a{float:left;width:auto;padding-left:15px;padding-right:15px;height:40px;line-height:40px;text-align:center;background:#f0f0f0;margin:0 20px 10px 0;font-size:16px;color:#555}
+.catelist a:hover,.catelist a.active{background:#0099cc;color:#fff;}
 
 .mtitle{text-align:center;padding:32px 0;}
 .mtitle h2{display:inline-block;position:relative;font-size:30px;color:#555;font-weight:400;padding:0 150px;line-height:48px;height:48px;}
 .mtitle h2 span{background:#fff;position:relative;z-index:1;display:inline-block;padding:0 30px;}
 .mtitle b{position:absolute;left:0;top:50%;width:100%;height:1px;background:#ccc;}
-.mtitle p{font-size:16px;color:#0071bf;line-height:50px;}
+.mtitle p{font-size:16px;color:#0099cc;line-height:50px;}
 .mtitle p i{background-position:0 -58px;width:18px;height:18px;vertical-align: middle}
 
 .mapnav{height:49px;line-height:49px;font-size:16px;color:#777;border-bottom:1px solid #eee;position:relative;z-index:200}
@@ -183,7 +183,7 @@ textarea {resize:none;min-height:60px;padding:15px 20px;}
 .c_list{}
 .c_list li{}
 .c_list li a{display:block;overflow:hidden;text-align:center;background:#f7f7f7;height:50px;line-height:50px;color:#777;padding:0 10px 0 2px;font-size:16px;border-bottom:1px solid #fff;white-space:nowrap;text-overflow:ellipsis}
-.c_list li a.ns,.c_list li a:hover{text-decoration:none;background:#0099cc;color:#fff;}
+.c_list li a.ns,.c_list li a:hover{text-decoration:none;background:#./js;color:#fff;}
 .c_list li .sub-menu{display:none}
 .c_list li .sub-menu a{padding-left:13px;font-size:14px;}
 /*侧栏结束================================*/

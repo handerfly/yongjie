@@ -37,8 +37,8 @@
 .case_list li .pic img{height:100%}
 .case_list li .tt{display:block;font-weight:normal;font-size:16px;line-height:33px;height:33px;overflow:hidden;text-align:center;}
 .case_list .end{margin-right:0;}
-.case_list li:hover .pic{border-color:#016aaf;background:#016aaf}
-.case_list li:hover .tit{color:#016aaf}
+.case_list li:hover .pic{border-color:#0099cc;background:#0099cc}
+.case_list li:hover .tit{color:#0099cc}
 
 /*选择我们*/
 .choose-us{padding-bottom:42px;}
@@ -71,17 +71,17 @@
 .certification li h3{line-height:30px;height:30px;overflow:hidden;font-size:14px;text-align:center;}
 .certification .end{margin-right:0;}
 
-.certification li:hover .pic{border-color:#016aaf;background:#016aaf}
-.certification li:hover a{color:#016aaf}
+.certification li:hover .pic{border-color:#0099cc;background:#0099cc}
+.certification li:hover a{color:#0099cc}
 
 .news-panel{padding-top:38px;}
 .news{float:left;width:366px;padding:0 17px;}
 .news .hd{font-size:30px;color:#555;line-height:40px;margin-bottom:20px;}
 .news li:last-child{border-bottom:0;}
 .news li{height:39px;line-height:39px;position:relative;border-bottom:1px dotted #d5d5d5;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.news li em{float:left;color:#016aaf;margin-right:15px;}
+.news li em{float:left;color:#0099cc;margin-right:15px;}
 .news li a{color:#777;}
-.news li a:hover{color:#016aaf;}
+.news li a:hover{color:#0099cc;}
 .news li:last-child{border-bottom:0;}
 
 .news-panel .fd{clear:both;text-align:center}
