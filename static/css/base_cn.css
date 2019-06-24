@@ -54,7 +54,7 @@ textarea {resize:none;min-height:60px;padding:15px 20px;}
 .tnav .lang{float:right;font-size:12px;}
 .tnav .lang i{float:left;background:url(../images/lang.png) no-repeat;width:20px;height:14px;margin:8px 5px 0 0;}
 .tnav .lang a{float:left;margin-left:12px;color:#777}
-.tnav .lang a.s{color:#00469c}
+.tnav .lang a.s{color:#./js}
 .tnav .lang .en{background-position:0 -14px;}
 
 .header .top{height:124px;position:relative;z-index:1;}
@@ -62,13 +62,13 @@ textarea {resize:none;min-height:60px;padding:15px 20px;}
 .header .logo a{float:left;}
 .header .tel{position:absolute;right:0;top:42px;font-size:16px;height:50px;color:#333;line-height:20px;padding-left:60px;}
 .header .tel i{position:absolute;left:0;top:0;float:left;background-position:0 0;width:50px;height:50px;}
-.header .tel strong{font-size:30px;color:#00469c;line-height:30px;font-weight:400;font-family:arial}
+.header .tel strong{font-size:30px;color:#./js;line-height:30px;font-weight:400;font-family:arial}
 
 .header .navBtn{display:none;position:absolute;top:50%;right:34px;width:44px;height:37px;margin-top:-19px;cursor:pointer;z-index:1;}
 .header .navBtn{transition-duration:.5s;-ms-transition-duration:.5s;-moz-transition-duration:.5s;-webkit-transition-duration:.5s; }
 
 /*主菜单=======================*/
-.header .nav{height:50px;background:#00469c;position:relative;}
+.header .nav{height:50px;background:#0099cc;position:relative;}
 
 .header .nav ul{float:left}
 .header .nav li{float:left;margin-right:4px;}
@@ -183,7 +183,7 @@ textarea {resize:none;min-height:60px;padding:15px 20px;}
 .c_list{}
 .c_list li{}
 .c_list li a{display:block;overflow:hidden;text-align:center;background:#f7f7f7;height:50px;line-height:50px;color:#777;padding:0 10px 0 2px;font-size:16px;border-bottom:1px solid #fff;white-space:nowrap;text-overflow:ellipsis}
-.c_list li a.ns,.c_list li a:hover{text-decoration:none;background:#00469c;color:#fff;}
+.c_list li a.ns,.c_list li a:hover{text-decoration:none;background:#./js;color:#fff;}
 .c_list li .sub-menu{display:none}
 .c_list li .sub-menu a{padding-left:13px;font-size:14px;}
 /*侧栏结束================================*/
@@ -192,11 +192,11 @@ textarea {resize:none;min-height:60px;padding:15px 20px;}
 /*底部开始================================*/
 .footer{background:#57a024;padding:0px;color:#777;font-size:14px;}
 
-.fnav{background:#024495;line-height:32px;text-align:left;padding:38px 0}
+.fnav{background:#0099cc;line-height:32px;text-align:left;padding:38px 0}
 .fnav >ul>li{float:left;width:230px;margin-right:10px;}
 
 .fnav a{color:#fffefe;font-size:14px;}
-.fnav a:hover{color:#999}
+.fnav a:hover{color:#CCFFFF}
 .fnav .psa{display:block;font-size:18px;margin-bottom:25px;}
 .fnav ul ul{line-height:32px;}
 .fnav ul ul li{height:32px;line-height:32px;overflow: hidden;white-space:nowrap;text-overflow:ellipsis;}
