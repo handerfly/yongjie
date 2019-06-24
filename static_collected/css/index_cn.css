@@ -3,7 +3,7 @@
 .fd{text-align:center}
 .more{padding:0 28px;height:42px;line-height:42px;font-size:20px;margin:25px auto 0;border-width:2px;border-radius:8px;width:178px;background:none}
 .more em{color:#ff7e00}
-.more:hover{background-color:#025299;color:#fff;}
+.more:hover{background-color:#0099cc;color:#fff;}
 .more:hover em{color:#fff}
 
 /*应用*/
