@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e02470b8-b747-4c40-bdb9-2a688228f0da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/home/templates/home/solution_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/solution_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/templates/mobile/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/templates/mobile/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="e02470b8-b747-4c40-bdb9-2a688228f0da" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobile/templates/mobile/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+            <state relative-caret-position="408">
+              <caret line="74" column="32" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#ul#0;n#div#1;n#div#4;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -47,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home/templates/home/solution_detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
@@ -57,13 +54,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/home/views.py">
+        <entry file="file://$PROJECT_DIR$/mobile/templates/mobile/solution_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6744">
-              <caret line="289" column="162" selection-start-line="289" selection-start-column="162" selection-end-line="289" selection-end-column="162" />
+            <state relative-caret-position="-24">
+              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
               <folding>
-                <element signature="e#0#54#0" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home/templates/home/lab.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -182,7 +188,6 @@
         <option value="$PROJECT_DIR$/mobile/templates/mobile/product_detail.html" />
         <option value="$PROJECT_DIR$/mobile/views.py" />
         <option value="$PROJECT_DIR$/static/js/check_mobile.js" />
-        <option value="$PROJECT_DIR$/mobile/templates/mobile/solution_detail.html" />
         <option value="$PROJECT_DIR$/static/js/common-new.js" />
         <option value="$PROJECT_DIR$/static/mobile/js/common.js" />
         <option value="$PROJECT_DIR$/static/js/common.js" />
@@ -210,7 +215,6 @@
         <option value="$PROJECT_DIR$/home/templates/home/cases.html" />
         <option value="$PROJECT_DIR$/home/templates/home/products.html" />
         <option value="$PROJECT_DIR$/home/templates/home/product_detail.html" />
-        <option value="$PROJECT_DIR$/home/templates/home/lab.html" />
         <option value="$PROJECT_DIR$/home/templates/home/index.html" />
         <option value="$PROJECT_DIR$/static_collected/css/index_cn.css" />
         <option value="$PROJECT_DIR$/static/css/index_cn.css" />
@@ -223,6 +227,8 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/mobile/templates/mobile/index.html" />
         <option value="$PROJECT_DIR$/home/templates/home/solution_detail.html" />
+        <option value="$PROJECT_DIR$/mobile/templates/mobile/solution_detail.html" />
+        <option value="$PROJECT_DIR$/home/templates/home/lab.html" />
       </list>
     </option>
   </component>
@@ -416,16 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/templates/mobile/solution_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="32" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/common-new.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -610,13 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/templates/home/lab.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="105" column="64" selection-start-line="105" selection-start-column="64" selection-end-line="105" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/home/case_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -751,20 +740,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/templates/mobile/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#4;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/home/solution_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/templates/mobile/solution_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/templates/home/lab.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/templates/mobile/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="74" column="32" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#4;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
