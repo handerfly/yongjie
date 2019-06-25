@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e02470b8-b747-4c40-bdb9-2a688228f0da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/home/templates/home/lab.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/lab.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/product_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/news_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/news_detail.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,11 +21,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home/templates/home/lab.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
               <caret line="53" column="86" selection-start-line="53" selection-start-column="86" selection-end-line="53" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/home/templates/home/news_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -113,7 +121,6 @@
         <option value="$PROJECT_DIR$/home/templates/home/honer.html" />
         <option value="$PROJECT_DIR$/home/templates/home/service.html" />
         <option value="$PROJECT_DIR$/home/templates/home/solution.html" />
-        <option value="$PROJECT_DIR$/home/templates/home/news_detail.html" />
         <option value="$PROJECT_DIR$/home/templates/home/news.html" />
         <option value="$PROJECT_DIR$/templates/404.html" />
         <option value="$PROJECT_DIR$/yongjie/urls.py" />
@@ -147,6 +154,7 @@
         <option value="$PROJECT_DIR$/home/templates/home/solution_detail.html" />
         <option value="$PROJECT_DIR$/home/templates/home/product_detail.html" />
         <option value="$PROJECT_DIR$/home/templates/home/lab.html" />
+        <option value="$PROJECT_DIR$/home/templates/home/news_detail.html" />
       </list>
     </option>
   </component>
@@ -392,13 +400,6 @@
     <entry file="file://$PROJECT_DIR$/yongjie/settings/develop.py" />
     <entry file="file://$PROJECT_DIR$/yongjie/settings/product.py" />
     <entry file="file://$PROJECT_DIR$/yongjie/settings/default.py" />
-    <entry file="file://$PROJECT_DIR$/home/templates/home/news_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yongjie/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -689,6 +690,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="53" column="86" selection-start-line="53" selection-start-column="86" selection-end-line="53" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/templates/home/news_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
         </state>
       </provider>
     </entry>
