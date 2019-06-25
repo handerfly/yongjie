@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e02470b8-b747-4c40-bdb9-2a688228f0da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/home/templates/home/news_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/news_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/base_cn.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/base_cn.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,11 +30,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home/templates/home/news_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
+            <state>
               <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobile/templates/mobile/news_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+              <folding>
+                <element signature="e#685#691#0" expanded="true" />
+                <element signature="e#691#697#0" expanded="true" />
+                <element signature="e#697#703#0" expanded="true" />
+                <element signature="e#749#755#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/base_cn.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="185" column="74" selection-start-line="185" selection-start-column="74" selection-end-line="185" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -129,7 +153,6 @@
         <option value="$PROJECT_DIR$/yongjie/settings/develop.py" />
         <option value="$PROJECT_DIR$/yongjie/settings/product.py" />
         <option value="$PROJECT_DIR$/home/urls.py" />
-        <option value="$PROJECT_DIR$/static/css/base_cn.css" />
         <option value="$PROJECT_DIR$/static_collected/css/base_cn.css" />
         <option value="$PROJECT_DIR$/home/admin.py" />
         <option value="$PROJECT_DIR$/home/templates/home/case_detail.html" />
@@ -155,6 +178,7 @@
         <option value="$PROJECT_DIR$/home/templates/home/product_detail.html" />
         <option value="$PROJECT_DIR$/home/templates/home/lab.html" />
         <option value="$PROJECT_DIR$/home/templates/home/news_detail.html" />
+        <option value="$PROJECT_DIR$/static/css/base_cn.css" />
       </list>
     </option>
   </component>
@@ -185,33 +209,13 @@
             <path>
               <item name="yongjie" type="b2602c69:ProjectViewProjectNode" />
               <item name="yongjie" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yongjie" type="b2602c69:ProjectViewProjectNode" />
               <item name="yongjie" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yongjie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yongjie" type="462c0819:PsiDirectoryNode" />
-              <item name="mobile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yongjie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yongjie" type="462c0819:PsiDirectoryNode" />
-              <item name="mobile" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yongjie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yongjie" type="462c0819:PsiDirectoryNode" />
-              <item name="mobile" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="mobile" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yongjie" type="b2602c69:ProjectViewProjectNode" />
@@ -311,19 +315,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="21" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/templates/mobile/news_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
-          <folding>
-            <element signature="e#685#691#0" expanded="true" />
-            <element signature="e#691#697#0" expanded="true" />
-            <element signature="e#697#703#0" expanded="true" />
-            <element signature="e#749#755#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -455,13 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="157" column="68" selection-start-line="157" selection-start-column="68" selection-end-line="157" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/base_cn.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="153" column="68" selection-start-line="153" selection-start-column="68" selection-end-line="153" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -695,8 +679,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/home/news_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state>
           <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/templates/mobile/news_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+          <folding>
+            <element signature="e#685#691#0" expanded="true" />
+            <element signature="e#691#697#0" expanded="true" />
+            <element signature="e#697#703#0" expanded="true" />
+            <element signature="e#749#755#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/base_cn.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="185" column="74" selection-start-line="185" selection-start-column="74" selection-end-line="185" selection-end-column="74" />
         </state>
       </provider>
     </entry>
