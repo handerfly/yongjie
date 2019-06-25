@@ -51,7 +51,7 @@
             <li data-cid="{{each_case.type|add:104}}">
                 <a href="{% url 'home:case_detail' each_case.id%}" title="{{each_case.title}}" class="pic" target="_blank">
                     <img src="/media/{{each_case.cover}}" alt="{{each_case.title}}" title="{{each_case.title}}"/></a>
-                <a href="/case/26.html" class="tt" target="_blank">{{each_case.title}}{{each_case.type|add:104}}</a>
+                <a href="/case/26.html" class="tt" target="_blank">{{each_case.title}}</a>
             </li>
             {% empty%}
             暂时没有相关案例...
