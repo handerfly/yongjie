@@ -181,6 +181,7 @@ class SolutionType(models.Model):
 # 解决方案
 class Solution(models.Model):
     title = models.CharField("净化方案标题", max_length=100)
+    order = models.SmallIntegerField("排序", default='0', help_text="数值越小排序越前")
     type = models.ForeignKey(SolutionType, on_delete=models.CASCADE, verbose_name="解决方案")
     cover = models.ImageField("封面图片", upload_to='solution_cover/', help_text="建议图片大小：360*258像素")
     detail = RichTextUploadingField("净化方案详情", config_name='my_config')

@@ -30,6 +30,7 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(ProductType)
 class ProductTypeAdmin(admin.ModelAdmin):
     list_display = ('category','title', 'order','update_time')
+    list_editable = ['order', ]
 
 class ProductImgsInline(admin.TabularInline):
     model = ProductImgs
@@ -47,10 +48,12 @@ class ProductImgsAdmin(admin.ModelAdmin):
 @admin.register(SolutionType)
 class SolutionTypeAdmin(admin.ModelAdmin):
     list_display = ('title', 'order','update_time')
+    list_editable = ['order', ]
 
 @admin.register(Solution)
 class SolutionAdmin(admin.ModelAdmin):
-    list_display = ('title', 'type', 'cover','show_detail', 'update_time')
+    list_display = ('title', 'order', 'type', 'cover','show_detail', 'update_time')
+    list_editable = ['order', ]
 
 class CasesImgsInline(admin.TabularInline):
     model = CasesImgs
