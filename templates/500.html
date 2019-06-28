@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}500{% endblock %}
+{% block title %}505{% endblock %}
 
 
 {% load staticfiles %}
@@ -9,31 +9,14 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'templets/default/style/style.css' %}" />
 	<link href="{% static 'cdn.bootcss.com/animate.css/3.5.2/animate.min.css' %}" rel="stylesheet">
 {% endblock %}
-{% block body_tag %} <body class="articleview"> {% endblock %}
+{% block body_tag %} <body> {% endblock %}
 {% block content %}
-
-    <div class="nybanner">
-        <span><img width="1920" height="433" src="/media/{{content.banner_img}}" /></span>
-	</div>
-    <!--/nybanner-->
-
-    <div class="layout">
-        <div class="abouttext container">
-            <div class="nyname">
-                <h1>500</h1>
-
-
-
-
-            </div>
-			<div class="article-content">
-
-                500
-
-			</div>
+<div class="wrapper">
+        <div class="sorry">
+            <div class="pic"><img src="{% static 'images/404.jpg'%}"></div>
+            <div class="fc"></div>
         </div>
     </div>
-	<!--/main-->
 
 
 {% endblock %}
