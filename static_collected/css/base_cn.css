@@ -183,7 +183,7 @@ textarea {resize:none;min-height:60px;padding:15px 20px;}
 .c_list{}
 .c_list li{}
 .c_list li a{display:block;overflow:hidden;text-align:center;background:#f7f7f7;height:50px;line-height:50px;color:#777;padding:0 10px 0 2px;font-size:16px;border-bottom:1px solid #fff;white-space:nowrap;text-overflow:ellipsis}
-.c_list li a.ns,.c_list li a:hover{text-decoration:none;background:#./js;color:#fff;}
+.c_list li a.ns,.c_list li a:hover{text-decoration:none;background:#0099cc;color:#fff;}
 .c_list li .sub-menu{display:none}
 .c_list li .sub-menu a{padding-left:13px;font-size:14px;}
 /*侧栏结束================================*/
