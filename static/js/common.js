@@ -128,7 +128,7 @@
             j = 0
           }
           move();
-        },2000)
+        },10000)
         $('.imgs_tab').mouseover(function(){
           clearInterval(timer);
         })
@@ -139,7 +139,7 @@
               j = 0
             }
             move();
-          },2000)
+          },10000)
         })
     }
     peoimgs();
