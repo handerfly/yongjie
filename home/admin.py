@@ -130,7 +130,7 @@ class PriceAdmin(admin.ModelAdmin):
 class BannerAdmin(admin.ModelAdmin):
     list_display = ('id', 'show_img', 'url', 'open', 'order','is_deleted')
     list_filter = ('is_deleted',)
-    list_editable = ['order', ]
+    list_editable = ['order','is_deleted' ]
     # 过滤器功能及能过滤的字段
     list_filter = ('is_deleted', )
 
