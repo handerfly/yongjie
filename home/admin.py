@@ -65,7 +65,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ('title', 'category','type','sub_type', 'show_detail', 'update_time')
 
     # list_editable 设置默认可编辑字段（category默认不可编辑，因为它是一个链接，点击会进入修改页面）
-    list_editable = ['category', 'type', 'sub_type']
+    list_editable = ['category', 'type']
 
     # fk_fields 设置显示外键字段
     fk_fields = ('category','type')
@@ -106,15 +106,15 @@ class CasesImgsInline(admin.TabularInline):
 class CasesAdmin(admin.ModelAdmin):
     inlines = [CasesImgsInline]
     list_display = ('title', 'solution','type', 'detail', 'update_time')
-    list_editable = ['type']
+    list_editable = ['type','solution']
 
     # fk_fields 设置显示外键字段
     fk_fields = ('type',)
 
     # 过滤器功能及能过滤的字段
-    list_filter = ('type',)
+    list_filter = ('type','solution')
     # 搜索功能及能实现搜索的字段
-    search_fields = ('title', 'solution','type', 'detail')
+    search_fields = ('title', 'solution','type', 'detail','update_time')
 
 @admin.register(CasesImgs)
 class CasesImgsAdmin(admin.ModelAdmin):
@@ -123,13 +123,16 @@ class CasesImgsAdmin(admin.ModelAdmin):
 @admin.register(Price)
 class PriceAdmin(admin.ModelAdmin):
     list_display = ('area','show_level','name','colored_sex','mobile')
-
+    # 过滤器功能及能过滤的字段
+    list_filter = ('area', 'show_level','colored_sex')
 
 @admin.register(Banner)
 class BannerAdmin(admin.ModelAdmin):
     list_display = ('id', 'show_img', 'url', 'open', 'order','is_deleted')
     list_filter = ('is_deleted',)
-
+    list_editable = ['order', ]
+    # 过滤器功能及能过滤的字段
+    list_filter = ('is_deleted', )
 
 admin.site.site_header = '广州顺尚净化网后台管理'
 admin.site.site_title = '广州顺尚净化网'
