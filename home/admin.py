@@ -109,7 +109,7 @@ class CasesAdmin(admin.ModelAdmin):
     list_editable = ['type','solution']
 
     # fk_fields 设置显示外键字段
-    fk_fields = ('type',)
+    fk_fields = ('type','solution')
 
     # 过滤器功能及能过滤的字段
     list_filter = ('type','solution')
