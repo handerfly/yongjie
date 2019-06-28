@@ -31,7 +31,7 @@ def index(request):
 	banners = Banner.objects.filter(is_deleted=True).order_by('order')
 
 	# 解决方案
-	solutions = Solution.objects.all()[:4]
+	solutions = Solution.objects.all().order_by('order')[:4]
 
 	# 案例
 	cases = Cases.objects.all()[:8]
