@@ -32,7 +32,7 @@ class NewsAdmin(admin.ModelAdmin):
     # 过滤器功能及能过滤的字段
     list_filter = ('type', 'author', 'update_time')
     # 搜索功能及能实现搜索的字段
-    search_fields = ('title', 'type', 'author','show_content', 'viewed','update_time')
+    search_fields = ('title', 'show_content' )
 
 
 
@@ -53,7 +53,7 @@ class ProductTypeAdmin(admin.ModelAdmin):
     # 过滤器功能及能过滤的字段
     list_filter = ('category', 'update_time')
     # 搜索功能及能实现搜索的字段
-    search_fields = ('category','title', 'order','update_time')
+    search_fields = ('title',)
 
 class ProductImgsInline(admin.TabularInline):
     model = ProductImgs
@@ -73,7 +73,7 @@ class ProductAdmin(admin.ModelAdmin):
     # 过滤器功能及能过滤的字段
     list_filter = ('category','type','sub_type')
     # 搜索功能及能实现搜索的字段
-    search_fields = ('title', 'category','type','sub_type', 'show_detail')
+    search_fields = ('title', 'sub_type', 'show_detail')
 
 @admin.register(ProductImgs)
 class ProductImgsAdmin(admin.ModelAdmin):
@@ -96,7 +96,7 @@ class SolutionAdmin(admin.ModelAdmin):
     # 过滤器功能及能过滤的字段
     list_filter = ('type', )
     # 搜索功能及能实现搜索的字段
-    search_fields = ('title', 'type', 'show_detail')
+    search_fields = ('title', 'show_detail')
 
 class CasesImgsInline(admin.TabularInline):
     model = CasesImgs
@@ -114,7 +114,7 @@ class CasesAdmin(admin.ModelAdmin):
     # 过滤器功能及能过滤的字段
     list_filter = ('type','solution')
     # 搜索功能及能实现搜索的字段
-    search_fields = ('title', 'solution','type', 'detail','update_time')
+    search_fields = ('title', 'detail')
 
 @admin.register(CasesImgs)
 class CasesImgsAdmin(admin.ModelAdmin):
