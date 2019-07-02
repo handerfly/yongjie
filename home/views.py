@@ -147,9 +147,9 @@ def solution(request):
 		if not each_solution.title == "实验室系统":
 			type_obj = each_solution.type
 
-		# 找出所有相关type的案例
-		relate_cases = Cases.objects.filter(solution=type_obj)[:4]
-		solution_cases_dic[each_solution] = relate_cases
+			# 找出所有相关type的案例
+			relate_cases = Cases.objects.filter(solution=type_obj)[:4]
+			solution_cases_dic[each_solution] = relate_cases
 
 
 	context = {}
