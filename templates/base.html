@@ -45,7 +45,7 @@
             <ul class="cf">
                 <li class="home"><a  class="psa {% if request.get_full_path == '/' %}active{% endif %}" href="{% url 'home'%}">首页</a></li>
                 <li class="">
-                    <a class="psa {% if request.get_full_path|slice:'14' == '/home/solution' %}active{% endif %}" href="{% url 'home:solution'%}" title='解决方案' >净化系统</a>
+                    <a class="psa {% if request.get_full_path|slice:'14' == '/home/solution' %}active{% endif %}" href="{% url 'home:solution'%}" title='净化工程' >净化工程</a>
                         <div class="subnav">
                             <div class="wrapper">
                                 <ul class="sub-menu cf">
@@ -59,7 +59,7 @@
                             </div>
                         </div>
                 </li>
-                <li class=""><a class="psa {% if request.path == url_lab %}active{% endif %}" href="{% url 'home:lab'%}" title='净化设备' >实验室系统</a></li>
+                <li class=""><a class="psa {% if request.path == url_lab %}active{% endif %}" href="{% url 'home:lab'%}" title='实验室工程' >实验室工程</a></li>
                 <li class=""><a class="psa {% if request.get_full_path|slice:'10' == '/home/case' %}active{% endif %}" href="{% url 'home:cases' 0%}" title='成功案例' >成功案例</a></li>
                 <li class="">
                     <a class="psa {% if request.get_full_path|slice:'13' == '/home/product' %}active{% endif %}" href="{% url 'home:products' 0 'all' 1%}" title='产品中心' >产品中心</a>
@@ -73,7 +73,7 @@
                         </div>
                 </li>
                 <li class=" omenu">
-                    <a class="psa {% if request.get_full_path|slice:'10' == '/home/news' %}active{% endif %}" href="{% url 'home:news' 0%}" title='新闻中心' >行业资讯</a>
+                    <a class="psa {% if request.get_full_path|slice:'10' == '/home/news' %}active{% endif %}" href="{% url 'home:news' 0%}" title='行业资讯' >行业资讯</a>
                     <div class="subnav">
                         <div class="wrapper">
                             <ul class="sub-menu cf">
