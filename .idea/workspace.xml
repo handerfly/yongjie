@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e02470b8-b747-4c40-bdb9-2a688228f0da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/media/cases_cover/1_E1DycbW.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/cases_cover/1_E1DycbW.jpg" afterDir="false" />
-    </list>
+    <list default="true" id="e02470b8-b747-4c40-bdb9-2a688228f0da" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,7 +309,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="34" width="1891" height="1013" extended-state="0" />
+    <frame x="36" y="34" width="1891" height="1013" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13167836" />
