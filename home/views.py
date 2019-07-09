@@ -144,7 +144,7 @@ def solution(request):
 	solution_objs = Solution.objects.all()
 	solution_cases_dic = {}
 	for each_solution in solution_objs:
-		if not each_solution.title == "实验室系统":
+		if not each_solution.title == "实验室工程":
 			type_obj = each_solution.type
 
 			# 找出所有相关type的案例
@@ -174,7 +174,7 @@ def solution_detail(request, solution_id):
 
 # 实验室系统
 def lab(request):
-	lab_type_obj = SolutionType.objects.filter(title="实验室系统").first()
+	lab_type_obj = SolutionType.objects.filter(title="实验室工程").first()
 
 	solution_obj = get_object_or_404(Solution, type=lab_type_obj)
 
