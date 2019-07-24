@@ -315,3 +315,21 @@ class Banner(models.Model):
     show_img.short_description = '轮番图片'
 
 
+
+# Head_img
+class Head_img(models.Model):
+
+    image = models.ImageField("图片", upload_to='head_img/',help_text="建议图片大小：1920*300像素")
+
+    class Meta:
+        verbose_name_plural = "导航图片"
+
+    def show_img(self):
+        if self.image:
+            url = reverse('home')
+            return mark_safe('<a href="%s/media/%s" target="_blank"><img src="%s/media/%s" width=100 /></a>' % (settings.DOMAIN_NAME,self.image,settings.DOMAIN_NAME,self.image))
+        else:
+            return '(no image)'
+
+    show_img.short_description = '导航图片'
+
