@@ -124,7 +124,6 @@ class CasesImgsAdmin(admin.ModelAdmin):
 class PriceAdmin(admin.ModelAdmin):
     list_display = ('area','show_level','name','colored_sex','mobile')
     # 过滤器功能及能过滤的字段
-    list_filter = ('area', 'show_level','colored_sex')
 
 @admin.register(Banner)
 class BannerAdmin(admin.ModelAdmin):

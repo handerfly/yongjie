@@ -94,9 +94,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',   # 数据库引擎
         'NAME': 'shunshang_db',         # 你要存储数据的库名，事先要创建之
         'USER': 'sunsang',         # 数据库用户名
-        'PASSWORD': os.environ['DATA_PASS'],     # 密码
-        'HOST': '127.0.0.1',    # 主机
-       #'HOST': '47.94.235.194',    # 主机
+        #'PASSWORD': os.environ['DATA_PASS'],     # 密码
+        'PASSWORD':'Ss390219@sub26',
+        #'HOST': '127.0.0.1',    # 主机
+       'HOST': '47.94.235.194',    # 主机
         'PORT': '3306',         # 数据库使用的端口
     }
 }
@@ -197,9 +198,10 @@ EMAIL_USE_TLS = False   #是否使用TLS安全传输协议(用于在两个通信
 EMAIL_USE_SSL = True    #是否使用SSL加密，qq企业邮箱要求使用
 EMAIL_HOST = 'smtp.qq.com'   #发送邮件的邮箱 的 SMTP服务器，这里用了163邮箱
 EMAIL_PORT = 465     #发件箱的SMTP服务器端口
-EMAIL_HOST_USER = '2860889124@qq.com'    #发送邮件的邮箱地址
-EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']         #发送邮件的邮箱密码(这里使用的是授权码)
-DEFAULT_FROM_EMAIL = '顺尚 <2860889124@qq.com>'
+EMAIL_HOST_USER = '2930126359@qq.com'    #发送邮件的邮箱地址
+EMAIL_HOST_PASSWORD = "kdiqmsdixvtzdedh"
+#EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']         #发送邮件的邮箱密码(这里使用的是授权码)
+DEFAULT_FROM_EMAIL = '顺尚 <2930126359@qq.com>'
 
 # 日志文件
 # LOGGING = {
