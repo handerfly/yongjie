@@ -133,6 +133,11 @@ class BannerAdmin(admin.ModelAdmin):
     # 过滤器功能及能过滤的字段
     list_filter = ('is_deleted', )
 
+@admin.register(Head_img)
+class Head_imgAdmin(admin.ModelAdmin):
+    list_display = ('id', 'show_img')
+
+
 admin.site.site_header = '广州顺尚净化网后台管理'
 admin.site.site_title = '广州顺尚净化网'
 
