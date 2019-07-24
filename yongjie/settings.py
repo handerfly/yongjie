@@ -22,8 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'v^qtma$#$)&xb$%du7b+_4x373o&#vb8tw8o0#1s)0_6ta(mx8'
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
-DEBUG = False
+DEBUG = True
+#DEBUG = False
 
 #ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['127.0.0.1','localhost','47.94.235.194','www.gzshunshang.cn','gzshunshang.cn']
@@ -95,10 +95,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',   # 数据库引擎
         'NAME': 'shunshang_db',         # 你要存储数据的库名，事先要创建之
         'USER': 'sunsang',         # 数据库用户名
-        #'PASSWORD': os.environ['DATA_PASS'],     # 密码
-        'PASSWORD':'Ss390219@sub26',
-        #'HOST': '127.0.0.1',    # 主机
-       'HOST': '47.94.235.194',    # 主机
+        'PASSWORD': os.environ['DATA_PASS'],     # 密码
+        #'PASSWORD':'Ss390219@sub26',
+        'HOST': '127.0.0.1',    # 主机
+       #'HOST': '47.94.235.194',    # 主机
         'PORT': '3306',         # 数据库使用的端口
     }
 }

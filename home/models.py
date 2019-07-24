@@ -317,13 +317,6 @@ class Banner(models.Model):
 # Head_img
 class Head_img(models.Model):
 
-<<<<<<< HEAD
-=======
-
-# Head_img
-class Head_img(models.Model):
-
->>>>>>> ee3c4bdd9c2548690632f258e9198245469b4ce0
     image = models.ImageField("图片", upload_to='head_img/',help_text="建议图片大小：1920*300像素")
 
     class Meta:
@@ -337,7 +330,3 @@ class Head_img(models.Model):
             return '(no image)'
 
     show_img.short_description = '导航图片'
-<<<<<<< HEAD
-=======
-
->>>>>>> ee3c4bdd9c2548690632f258e9198245469b4ce0
